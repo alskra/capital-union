@@ -1,0 +1,14 @@
+extends ../../pug/base
+include ../../components/HeaderPage
+include ../../components/IntroPage
+
+block favicon
+	include ../../pug/favicon
+
+block app
+	base-page.page-index
+		template
+			+header-page.theme-light
+			main
+				article
+					+intro-page
