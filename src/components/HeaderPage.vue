@@ -25,6 +25,7 @@
 
 		padding-top: var(--header-page_-_padding-top);
 		position: absolute;
+		z-index: 999;
 		top: 0;
 		left: 0;
 		width: 100%;
