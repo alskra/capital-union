@@ -10,19 +10,38 @@ mixin service-item({title, description, content, imgSrc, url})
 					base-content!= content
 
 				footer.footer
-					button-outline(
-					tag="a"
-					href=""
-					) Visit website
+					.footer-col
+						button-outline(
+						tag="a"
+						href=""
+						) Visit website
+
+					.footer-col
+						.network-list
+							a.network-item(
+							href=""
+							title="Facebook"
+							)
+								icon-facebook.network-item-icon
+
+							a.network-item(
+							href=""
+							title="LinkedIn"
+							)
+								icon-linkedin.network-item-icon
 
 			aside.col-aside
 				figure.figure
 					.figure-img
 						img.figure-img-element(
 						src=imgSrc
+						srcset=`${imgSrc.replace(/\.(jpg|png)$/, '@2x.$1')} 2x`
 						alt=url
 						)
 
 					figcaption.figure-caption
-						a.figure-caption-link(href=`//${url}`)= url
+						a.figure-caption-link(
+						href=`//${url}`
+						target="_blank"
+						)= url
 

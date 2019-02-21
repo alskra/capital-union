@@ -3,11 +3,15 @@
 
 <script>
 	import ButtonOutline from './ButtonOutline';
+	import IconFacebook from './IconFacebook';
+	import IconLinkedin from './IconLinkedin';
 
 	export default {
 		name: 'ServiceItem',
 		components: {
-			ButtonOutline
+			ButtonOutline,
+			IconFacebook,
+			IconLinkedin
 		}
 	};
 </script>
@@ -17,10 +21,9 @@
 		@include reset;
 
 		display: flex;
-		margin-right: responsive-size(308, 10);
-		margin-left: responsive-size(177, 10);
 		border: 2px solid rgba(#030303, 0.1);
 		padding: responsive-size(70, 20) responsive-size(180, 15);
+		max-width: 1435px;
 
 		@media (width < env(--vw-md)) {
 			flex-flow: column;
@@ -40,7 +43,7 @@
 		@include reset;
 
 		color: var(--base-content-headings_-_color);
-		font-size: responsive-size(34, 24);
+		font-size: responsive-size(rem(34), rem(24));
 		font-weight: var(--base-content-headings_-_font-weight);
 		letter-spacing: em(2.55, 34);
 	}
@@ -56,18 +59,53 @@
 	}
 
 	.main {
+		position: relative;
 		margin-bottom: responsive-size(50, 30);
-		padding-left: responsive-size(80, 0);
+		padding-left: responsive-size(80, 20);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 13px;
+			bottom: 36px;
+			left: responsive-size(-180, -15);
+			margin-left: -2px;
+			width: 4px;
+			background-color: #ff9a00;
+		}
 	}
 
 	.footer {
 		display: flex;
-		padding-left: responsive-size(80, 0);
+		flex-wrap: wrap;
+		align-items: center;
+		margin: -10px -25px;
+		padding-left: responsive-size(80, 20);
+
+		&-col {
+			margin: 10px 25px;
+			min-width: 0;
+		}
 
 		@media (width < env(--vw-md)) {
 			justify-content: center;
 			padding-left: 0;
 		}
+	}
+
+	.network-list {
+		display: flex;
+		margin: -5px;
+	}
+
+	.network-item {
+		@include reset;
+
+		margin: 5px;
+		width: 36px;
+		height: 36px;
+		flex-shrink: 0;
+		cursor: pointer;
 	}
 
 	.col-aside {
@@ -127,7 +165,7 @@
 
 				display: inline;
 				color: #41454e;
-				font-size: responsive-size(18, 16);
+				font-size: responsive-size(rem(18), rem(16));
 				font-weight: 700;
 				line-height: 1.25;
 				cursor: pointer;

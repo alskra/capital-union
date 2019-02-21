@@ -15,11 +15,26 @@
 
 		display: flex;
 		flex-flow: column;
-		padding: xxl-to-xs(70, 30) 0;
+		align-items: center;
+		padding: responsive-size(70, 30) 10px;
 
 		.service-item {
-			margin-top: 25px;
-			margin-bottom: 25px;
+			margin: 25px 130px 25px 0;
+			width: calc(100% - 130px);
+
+			@media (width < env(--vw-md)) {
+				margin-right: 0;
+				width: 100%;
+			}
+
+			&:nth-child(even) {
+				margin-right: 0;
+				margin-left: 130px;
+
+				@media (width < env(--vw-md)) {
+					margin-left: 0;
+				}
+			}
 		}
 
 	}
