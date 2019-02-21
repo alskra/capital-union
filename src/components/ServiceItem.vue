@@ -20,7 +20,11 @@
 		margin-right: responsive-size(308, 10);
 		margin-left: responsive-size(177, 10);
 		border: 2px solid rgba(#030303, 0.1);
-		padding: responsive-size(70, 20) responsive-size(185, 15);
+		padding: responsive-size(70, 20) responsive-size(180, 15);
+
+		@media (width < env(--vw-md)) {
+			flex-flow: column;
+		}
 	}
 
 	.col-main {
@@ -67,18 +71,30 @@
 	}
 
 	.col-aside {
+		margin-top: responsive-size(40, 30);
+		margin-left: responsive-size(80, 20);
+		width: percentage(357 / 1054);
 		flex-shrink: 0;
-		margin-left: responsive-size(100, 20);
+
+		@media (width < env(--vw-md)) {
+			margin-left: 0;
+			width: auto;
+		}
 	}
 
 	.figure {
 		@include reset;
 
+		width: 357px;
+		max-width: 100%;
+
+		@media (width < env(--vw-md)) {
+			margin: 0 auto;
+		}
+
 		&-img {
 			position: relative;
-			width: responsive-size(357, 357 / 1.5);
-			max-width: 100%;
-			box-shadow: responsive-size(23, 23 / 1.5) responsive-size(27, 27 / 1.5) responsive-size(50, 50 / 1.5)
+			box-shadow: responsive-size(23, 23 / 2) responsive-size(27, 27 / 2) responsive-size(50, 50 / 2)
 			#41444d;
 			background-color: #3e3d3d;
 
@@ -95,6 +111,27 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+
+		&-caption {
+			margin-top: responsive-size(65, 20);
+			text-align: center;
+
+			&-link {
+				@include reset;
+
+				display: inline;
+				color: #41454e;
+				font-size: responsive-size(18, 16);
+				font-weight: 700;
+				line-height: 1.25;
+				cursor: pointer;
+				transition: color 0.15s ease-in-out;
+
+				&:hover {
+					color: var(--color-primary);
+				}
 			}
 		}
 	}
