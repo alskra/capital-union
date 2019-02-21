@@ -1,4 +1,6 @@
-mixin header-page(data)
+include ChooseLanguage
+
+mixin header-page()
 	header-page(inline-template)&attributes(attributes)
 		header.header-page
 			base-container
@@ -7,4 +9,16 @@ mixin header-page(data)
 				title="Pi Capital Union"
 				)
 					icon-pi-capital-union.logo-img
+
+				+choose-language({
+					languages: [
+						{code: 'en-UK', label: 'EN'},
+						{code: 'it', label: 'IT'},
+						{code: 'sr', label: 'SR'},
+						{code: 'zh', label: 'ZH'},
+						{code: 'ko', label: 'KO'},
+						{code: 'ru', label: 'RU'}
+					]
+				}).theme-header.right(:language="{code: 'ru', label: 'RU'}")
+
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Pi Capital Union</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+	<base href="/">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ff7b00">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#eaeaea">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#eaeaea">
+	<style>
+		[inline-template] {
+				display: none;
+			}
+			
+		</style>
+	<link href="/css/chunk-vendors.45c76c48.css" rel="preload" as="style">
+	<link href="/css/index.5e8cbb69.css" rel="preload" as="style">
+	<link href="/js/chunk-vendors.b5680efa.js" rel="modulepreload" as="script">
+	<link href="/js/index.27efacfd.js" rel="modulepreload" as="script">
+	<link href="/css/chunk-vendors.45c76c48.css" rel="stylesheet">
+	<link href="/css/index.5e8cbb69.css" rel="stylesheet">
+</head>
+
+<body>
+	<noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+	<base-page class="page-index">
+		<template>
+			<header-page class="theme-light" inline-template>
+				<header class="header-page">
+					<base-container><a class="logo" href="/" title="Pi Capital Union">
+							<icon-pi-capital-union class="logo-img"></icon-pi-capital-union>
+						</a>
+						<choose-language inline-template :language="{code: 'ru', label: 'ru'}">
+							<div class="choose-language">
+								<button class="button" type="button" @click="opened = !opened">{{ language.label }}</button>
+								<transition name="scaleY-fade">
+									<div class="dropdown" v-if="opened"><a class="dropdown-item" href="/" v-if="language.code !== 'en-UK'">
+											<div class="dropdown-item-label">en</div>
+											<div class="dropdown-item-icon"></div>
+										</a><a class="dropdown-item" href="/" v-if="language.code !== 'it'">
+											<div class="dropdown-item-label">it</div>
+											<div class="dropdown-item-icon"></div>
+										</a><a class="dropdown-item" href="/" v-if="language.code !== 'sr'">
+											<div class="dropdown-item-label">sr</div>
+											<div class="dropdown-item-icon"></div>
+										</a><a class="dropdown-item" href="/" v-if="language.code !== 'zh'">
+											<div class="dropdown-item-label">zh</div>
+											<div class="dropdown-item-icon"></div>
+										</a><a class="dropdown-item" href="/" v-if="language.code !== 'ko'">
+											<div class="dropdown-item-label">ko</div>
+											<div class="dropdown-item-icon"></div>
+										</a><a class="dropdown-item" href="/" v-if="language.code !== 'ru'">
+											<div class="dropdown-item-label">ru</div>
+											<div class="dropdown-item-icon"></div>
+										</a>
+									</div>
+								</transition>
+							</div>
+						</choose-language>
+					</base-container>
+				</header>
+			</header-page>
+			<main>
+				<article>
+					<intro-page inline-template>
+						<div class="intro-page">
+							<div class="bg-1"></div>
+							<div class="bg-2"></div>
+							<div class="bg-3"></div>
+						</div>
+					</intro-page>
+				</article>
+			</main>
+		</template>
+	</base-page>
+	<script type="module" src="/js/chunk-vendors.b5680efa.js"></script>
+	<script type="module" src="/js/index.27efacfd.js"></script>
+	<script>
+		! function() {
+			var e = document,
+				t = e.createElement("script");
+			if (!("noModule" in t) && "onbeforeload" in t) {
+				var n = !1;
+				e.addEventListener("beforeload", function(e) {
+					if (e.target === t) n = !0;
+					else if (!e.target.hasAttribute("nomodule") || !n) return;
+					e.preventDefault()
+				}, !0), t.type = "module", t.src = ".", e.head.appendChild(t), t.remove()
+			}
+		}();
+
+	</script>
+	<script type="text/javascript" src="/js/chunk-vendors-legacy.2c848b6b.js" nomodule></script>
+	<script type="text/javascript" src="/js/index-legacy.c82b93d4.js" nomodule></script>
+</body>
+
+</html>

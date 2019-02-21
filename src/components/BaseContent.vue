@@ -18,8 +18,8 @@
 		--base-content_-_line-height: #{(27 / 17)};
 		--base-content_-_margin: 1em;
 
-		--base-content-link_-_color: #81306e;
-		--base-content-link-hover_-_color: #{darken(#81306e, 15%)};
+		--base-content-link_-_color: var(--color-primary);
+		--base-content-link-hover_-_color: #{darken(#f88200, 15%)};
 
 		--base-content-headings_-_color: var(--base-content_-_color);
 		--base-content-headings_-_font-family: var(--base-content_-_font-family);

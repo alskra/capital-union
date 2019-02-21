@@ -3,19 +3,21 @@
 
 <script>
 	import IconPiCapitalUnion from './IconPiCapitalUnion';
+	import ChooseLanguage from './ChooseLanguage';
 
 	export default {
 		name: 'HeaderPage',
 		components: {
-			IconPiCapitalUnion
+			IconPiCapitalUnion,
+			ChooseLanguage
 		}
 	};
 </script>
 
-<style>
+<style lang="scss">
 	:root {
 		--header-page_-_color: #181716;
-		--header-page_-_padding-top: 60px;
+		--header-page_-_padding-top: #{xl-to-xs(60, 10)};
 	}
 </style>
 
@@ -29,9 +31,16 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		min-width: env(--vw-xs);
 
 		.base-container {
 			display: flex;
+			align-items: center;
+		}
+
+		.choose-language {
+			margin-left: auto;
+			flex-shrink: 0;
 		}
 
 		&.theme-light {
@@ -48,6 +57,7 @@
 
 		&-img {
 			display: block;
+			height: xl-to-xs(58, 40);
 		}
 	}
 </style>

@@ -1,0 +1,23 @@
+mixin choose-language({languages})
+	choose-language(inline-template)&attributes(attributes)
+		.choose-language(ref="choose-language")
+			button.button(
+			type="button"
+			@click="opened = !opened"
+			)
+				span.button-icon
+					component(:is="`icon-lang-${language.code.toLowerCase()}`")
+
+				span.button-label {{ language.label }}
+
+			transition(name="scaleY-fade")
+				.dropdown(v-if="opened")
+					each language in languages
+						a.dropdown-item(
+						href="/"
+						v-if=`language.code !== '${language.code}'`
+						)
+							span.dropdown-item-icon
+								component(is=`icon-lang-${language.code.toLowerCase()}`)
+
+							span.dropdown-item-label= language.label
