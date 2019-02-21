@@ -66,6 +66,24 @@
 	@return calc(
 		#{$value-xl} -
 		(#{strip-unit($value-xl)} - #{strip-unit($value-xs)}) *
-		(env(--vw-xl) - 100vw) / (#{strip-unit(env(--vw-xl))} - #{strip-unit(env(--vw-xs))})
+		(env(--vw-xl) - 100vw) /
+		(#{strip-unit(env(--vw-xl))} - #{strip-unit(env(--vw-xs))})
+	);
+}
+
+@function xxl-to-xs($value-xxl, $value-xs) {
+	@if (unitless($value-xxl)) {
+		$value-xxl: $value-xxl * 1px;
+	}
+
+	@if (unitless($value-xs)) {
+		$value-xs: $value-xs * 1px;
+	}
+
+	@return calc(
+		#{$value-xxl} -
+		(#{strip-unit($value-xxl)} - #{strip-unit($value-xs)}) *
+		(env(--vw-xxl) - 100vw) /
+		(#{strip-unit(env(--vw-xxl))} - #{strip-unit(env(--vw-xs))})
 	);
 }

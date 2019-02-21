@@ -17,7 +17,7 @@
 <style lang="scss">
 	:root {
 		--header-page_-_color: #181716;
-		--header-page_-_padding-top: #{xl-to-xs(60, 10)};
+		--header-page_-_padding-top: #{xxl-to-xs(60, 10)};
 	}
 </style>
 
@@ -57,7 +57,7 @@
 
 		&-img {
 			display: block;
-			height: xl-to-xs(58, 40);
+			height: xxl-to-xs(58, 40);
 		}
 	}
 </style>

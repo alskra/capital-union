@@ -25,6 +25,7 @@
 		height: 45px;
 		color: #232428;
 		font-size: rem(14);
+		font-weight: var(--base-content-headings_-_font-weight);
 		text-transform: uppercase;
 		letter-spacing: rem(1.05);
 

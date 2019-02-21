@@ -1,6 +1,8 @@
 extends ../../pug/base
+
 include ../../components/HeaderPage
 include ../../components/IntroPage
+include ../../components/ServiceItem
 
 block favicon
 	include ../../pug/favicon
@@ -13,3 +15,13 @@ block app
 			main
 				article
 					+intro-page
+
+					service-list
+						+service-item({
+							title: 'Making transactions secure & confidential again',
+							description: 'Virtual currency processing platform',
+							content: `<p>Our crypto payment platform EX Pi is a licensed international service that
+allow its clients to buy and sell cryptocurrencies, and make financial transactions using our stablecoins, secured from
+the volatility of cryptocurrencies. The exchange and all transactions are carried out using our own software platform,
+built on the basis of classical banking technologies.</p>`
+						})

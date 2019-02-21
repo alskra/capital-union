@@ -20,8 +20,9 @@
 		flex-flow: column;
 		justify-content: center;
 		position: relative;
-		padding: xl-to-xs(60 + 58 + 30, 10 + 40 + 20) 0 xl-to-xs(60 + 80 + 30, 10 + 40 + 20);
+		padding: xxl-to-xs(60 + 58 + 30, 10 + 40 + 20) 0 xxl-to-xs(60 + 80 + 30, 10 + 40 + 20);
 		min-height: 100vh;
+		overflow: hidden;
 		background-color: #020202;
 
 		.base-container {
@@ -30,7 +31,7 @@
 		}
 
 		.base-content {
-			margin-bottom: xl-to-xs(70, 40);
+			margin-bottom: xxl-to-xs(70, 40);
 		}
 	}
 
@@ -96,10 +97,10 @@
 
 	.sliding-line {
 		position: absolute;
-		bottom: xl-to-xs(60, 10);
+		bottom: xxl-to-xs(60, 10);
 		left: 50%;
 		width: 1px;
-		height: xl-to-xs(80, 40);
+		height: xxl-to-xs(80, 40);
 		overflow: hidden;
 
 		&::before {

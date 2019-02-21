@@ -1,0 +1,16 @@
+mixin service-item({title, description, content})
+	service-item(inline-template)&attributes(attributes)
+		article.service-item
+			.col-main
+				header.header
+					h2.title= title
+					p.description= description
+
+				.main
+					base-content!= content
+
+				footer.footer
+					button-outline(
+					tag="a"
+					href=""
+					) Visit website

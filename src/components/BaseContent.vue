@@ -36,12 +36,12 @@
 		@media (width < env(--vw-md)) {
 			--base-content_-_font-size: #{rem(17 - 2)};
 
-			--base-content-h1_-_font-size: #{rem(36 - 2)};
-			--base-content-h2_-_font-size: #{rem(32 - 2)};
-			--base-content-h3_-_font-size: #{rem(28 - 2)};
-			--base-content-h4_-_font-size: #{rem(24 - 2)};
-			--base-content-h5_-_font-size: #{rem(20 - 2)};
-			--base-content-h6_-_font-size: #{rem(16 - 2)};
+			--base-content-h1_-_font-size: #{rem(36 - 4)};
+			--base-content-h2_-_font-size: #{rem(32 - 4)};
+			--base-content-h3_-_font-size: #{rem(28 - 4)};
+			--base-content-h4_-_font-size: #{rem(24 - 4)};
+			--base-content-h5_-_font-size: #{rem(20 - 4)};
+			--base-content-h6_-_font-size: #{rem(16 - 4)};
 		}
 	}
 
