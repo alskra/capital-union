@@ -119,6 +119,8 @@
 		&-caption {
 			margin-top: responsive-size(65, 20);
 			text-align: center;
+			overflow: hidden;
+			text-overflow: ellipsis;
 
 			&-link {
 				@include reset;

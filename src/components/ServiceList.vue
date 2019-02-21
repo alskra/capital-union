@@ -21,5 +21,6 @@
 			margin-top: 25px;
 			margin-bottom: 25px;
 		}
+
 	}
 </style>

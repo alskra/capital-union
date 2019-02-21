@@ -13,7 +13,7 @@
 	:root {
 		--base-content_-_color: #757272;
 		--base-content_-_font-family: 'Roboto', sans-serif;
-		--base-content_-_font-size: #{responsive-size(17, 15)};
+		--base-content_-_font-size: #{responsive-size(rem(17), rem(15))};
 		--base-content_-_font-weight: 400;
 		--base-content_-_line-height: #{(27 / 17)};
 		--base-content_-_margin: 1em;
@@ -26,12 +26,12 @@
 		--base-content-headings_-_font-weight: 500;
 		--base-content-headings_-_line-height: 1.25;
 
-		--base-content-h1_-_font-size: #{responsive-size(36, 36 * 15 / 17)};
-		--base-content-h2_-_font-size: #{responsive-size(32, 32 * 15 / 17)};
-		--base-content-h3_-_font-size: #{responsive-size(28, 28 * 15 / 17)};
-		--base-content-h4_-_font-size: #{responsive-size(24, 24 * 15 / 17)};
-		--base-content-h5_-_font-size: #{responsive-size(20, 20 * 15 / 17)};
-		--base-content-h6_-_font-size: #{responsive-size(16, 16 * 15 / 17)};
+		--base-content-h1_-_font-size: #{responsive-size(rem(36), rem(36 * 15 / 17))};
+		--base-content-h2_-_font-size: #{responsive-size(rem(32), rem(32 * 15 / 17))};
+		--base-content-h3_-_font-size: #{responsive-size(rem(28), rem(28 * 15 / 17))};
+		--base-content-h4_-_font-size: #{responsive-size(rem(24), rem(24 * 15 / 17))};
+		--base-content-h5_-_font-size: #{responsive-size(rem(20), rem(20 * 15 / 17))};
+		--base-content-h6_-_font-size: #{responsive-size(rem(16), rem(16 * 15 / 17))};
 	}
 
 	@custom-selector :--headings
