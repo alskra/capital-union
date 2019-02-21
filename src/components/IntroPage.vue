@@ -2,8 +2,13 @@
 </template>
 
 <script>
+	import ButtonOutline from './ButtonOutline';
+
 	export default {
-		name: 'IntroPage'
+		name: 'IntroPage',
+		components: {
+			ButtonOutline
+		}
 	};
 </script>
 
@@ -11,9 +16,22 @@
 	.intro-page {
 		@include reset;
 
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
 		position: relative;
+		padding: xl-to-xs(60 + 58 + 30, 10 + 40 + 20) 0 xl-to-xs(60 + 80 + 30, 10 + 40 + 20);
 		min-height: 100vh;
 		background-color: #020202;
+
+		.base-container {
+			position: relative;
+			max-width: 800px;
+		}
+
+		.base-content {
+			margin-bottom: xl-to-xs(70, 40);
+		}
 	}
 
 	.bg-1 {
@@ -72,9 +90,12 @@
 		animation: intro-page-bg-3_-_background 40s ease-in-out alternate infinite;
 	}
 
+	.title {
+		letter-spacing: rem(2.7);
+	}
+
 	.sliding-line {
 		position: absolute;
-		z-index: 1;
 		bottom: xl-to-xs(60, 10);
 		left: 50%;
 		width: 1px;

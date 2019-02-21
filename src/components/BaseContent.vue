@@ -21,20 +21,27 @@
 		--base-content-link_-_color: var(--color-primary);
 		--base-content-link-hover_-_color: #{darken(#f88200, 15%)};
 
-		--base-content-headings_-_color: var(--base-content_-_color);
+		--base-content-headings_-_color: #141414;
 		--base-content-headings_-_font-family: var(--base-content_-_font-family);
-		--base-content-headings_-_font-weight: 800;
+		--base-content-headings_-_font-weight: 500;
 		--base-content-headings_-_line-height: 1.25;
 
-		--base-content-heading-1_-_font-size: #{rem(50)};
-		--base-content-heading-2_-_font-size: #{rem(46)};
-		--base-content-heading-3_-_font-size: #{rem(40)};
-		--base-content-heading-4_-_font-size: #{rem(32)};
-		--base-content-heading-5_-_font-size: #{rem(24)};
-		--base-content-heading-6_-_font-size: #{rem(16)};
+		--base-content-h1_-_font-size: #{rem(36)};
+		--base-content-h2_-_font-size: #{rem(32)};
+		--base-content-h3_-_font-size: #{rem(28)};
+		--base-content-h4_-_font-size: #{rem(24)};
+		--base-content-h5_-_font-size: #{rem(20)};
+		--base-content-h6_-_font-size: #{rem(16)};
 
 		@media (width < env(--vw-md)) {
-			--base-content_-_font-size: #{rem(14)};
+			--base-content_-_font-size: #{rem(17 - 2)};
+
+			--base-content-h1_-_font-size: #{rem(36 - 2)};
+			--base-content-h2_-_font-size: #{rem(32 - 2)};
+			--base-content-h3_-_font-size: #{rem(28 - 2)};
+			--base-content-h4_-_font-size: #{rem(24 - 2)};
+			--base-content-h5_-_font-size: #{rem(20 - 2)};
+			--base-content-h6_-_font-size: #{rem(16 - 2)};
 		}
 	}
 
@@ -98,32 +105,32 @@
 
 		h1,
 		.h1 {
-			font-size: var(--base-content-heading-1_-_font-size);
+			font-size: var(--base-content-h1_-_font-size);
 		}
 
 		h2,
 		.h2 {
-			font-size: var(--base-content-heading-2_-_font-size);
+			font-size: var(--base-content-h2_-_font-size);
 		}
 
 		h3,
 		.h3 {
-			font-size: var(--base-content-heading-3_-_font-size);
+			font-size: var(--base-content-h3_-_font-size);
 		}
 
 		h4,
 		.h4 {
-			font-size: var(--base-content-heading-4_-_font-size);
+			font-size: var(--base-content-h4_-_font-size);
 		}
 
 		h5,
 		.h5 {
-			font-size: var(--base-content-heading-5_-_font-size);
+			font-size: var(--base-content-h5_-_font-size);
 		}
 
 		h6,
 		.h6 {
-			font-size: var(--base-content-heading-6_-_font-size);
+			font-size: var(--base-content-h6_-_font-size);
 		}
 
 		ul,
@@ -221,10 +228,10 @@
 		}
 
 		&.theme-invert {
-			color: var(--base-page_-_background-color);
+			color: #ffffff;
 
 			:--headings {
-				color: var(--base-page_-_background-color);
+				color: #ffffff;
 			}
 		}
 	}

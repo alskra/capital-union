@@ -1,6 +1,7 @@
 <template lang="pug">
 	.base-button(:is="tag")
-		slot(name="icon")
+		span.icon
+			slot(name="icon")
 
 		span.label
 			slot
@@ -52,6 +53,7 @@
 	}
 
 	.icon {
+		display: block;
 		flex-shrink: 0;
 	}
 
