@@ -17,10 +17,10 @@
 		@include reset;
 
 		display: flex;
-		margin-right: xxl-to-xs(308, 10);
-		margin-left: xxl-to-xs(177, 10);
+		margin-right: responsive-size(308, 10);
+		margin-left: responsive-size(177, 10);
 		border: 2px solid rgba(#030303, 0.1);
-		padding: xxl-to-xs(70, 20) xxl-to-xs(185, 20) xxl-to-xs(120, 20) xxl-to-xs(190, 20);
+		padding: responsive-size(70, 20) responsive-size(185, 15);
 	}
 
 	.col-main {
@@ -28,21 +28,17 @@
 	}
 
 	.header {
-		margin-bottom: xxl-to-xs(50, 30);
-		padding-right: xxl-to-xs(80, 0);
+		margin-bottom: responsive-size(50, 30);
+		padding-right: responsive-size(80, 0);
 	}
 
 	.title {
 		@include reset;
 
 		color: var(--base-content-headings_-_color);
-		font-size: xxl-to-xs(34, 24);
+		font-size: responsive-size(34, 24);
 		font-weight: var(--base-content-headings_-_font-weight);
 		letter-spacing: em(2.55, 34);
-
-		@media (width < env(--vw-md)) {
-			//font-size: rem(34 - 4);
-		}
 	}
 
 	.description {
@@ -56,8 +52,8 @@
 	}
 
 	.main {
-		margin-bottom: xxl-to-xs(50, 30);
-		padding-left: xxl-to-xs(80, 0);
+		margin-bottom: responsive-size(50, 30);
+		padding-left: responsive-size(80, 0);
 	}
 
 	.footer {
@@ -79,15 +75,26 @@
 		@include reset;
 
 		&-img {
-			width: responsive-size(357, 200);
+			position: relative;
+			width: responsive-size(357, 357 / 1.5);
 			max-width: 100%;
-			box-shadow: 23px 27px 50px #41444d;
+			box-shadow: responsive-size(23, 23 / 1.5) responsive-size(27, 27 / 1.5) responsive-size(50, 50 / 1.5)
+			#41444d;
 			background-color: #3e3d3d;
 
 			&::before {
 				content: '';
 				display: block;
 				padding-top: percentage(202 / 357);
+			}
+
+			&-element {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 	}
