@@ -87,3 +87,28 @@
 		(#{strip-unit(env(--vw-xxl))} - #{strip-unit(env(--vw-xs))})
 	);
 }
+
+@function responsive-size($value-from, $value-to, $base-from: env(--vw-xxl), $base-to: env(--vw-xs)) {
+	@if (unitless($value-from)) {
+		$value-from: $value-from * 1px;
+	}
+
+	@if (unitless($value-to)) {
+		$value-to: $value-to * 1px;
+	}
+
+	@if (unitless($base-from)) {
+		$base-from: $base-from * 1px;
+	}
+
+	@if (unitless($base-to)) {
+		$base-to: $base-to * 1px;
+	}
+
+	@return calc(
+		#{$value-from} -
+		(#{strip-unit($value-from)} - #{strip-unit($value-to)}) *
+		(#{$base-from} - 100vw) /
+		(#{strip-unit($base-from)} - #{strip-unit($base-to)})
+	);
+}

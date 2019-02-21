@@ -16,10 +16,15 @@
 	.service-item {
 		@include reset;
 
+		display: flex;
 		margin-right: xxl-to-xs(308, 10);
 		margin-left: xxl-to-xs(177, 10);
 		border: 2px solid rgba(#030303, 0.1);
 		padding: xxl-to-xs(70, 20) xxl-to-xs(185, 20) xxl-to-xs(120, 20) xxl-to-xs(190, 20);
+	}
+
+	.col-main {
+		flex-grow: 1;
 	}
 
 	.header {
@@ -57,11 +62,33 @@
 
 	.footer {
 		display: flex;
-		padding-left: xxl-to-xs(80, 0);
+		padding-left: responsive-size(80, 0);
 
 		@media (width < env(--vw-md)) {
 			justify-content: center;
 			padding-left: 0;
+		}
+	}
+
+	.col-aside {
+		flex-shrink: 0;
+		margin-left: responsive-size(100, 20);
+	}
+
+	.figure {
+		@include reset;
+
+		&-img {
+			width: responsive-size(357, 200);
+			max-width: 100%;
+			box-shadow: 23px 27px 50px #41444d;
+			background-color: #3e3d3d;
+
+			&::before {
+				content: '';
+				display: block;
+				padding-top: percentage(202 / 357);
+			}
 		}
 	}
 </style>

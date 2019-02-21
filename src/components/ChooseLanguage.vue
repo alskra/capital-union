@@ -122,6 +122,7 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
+		will-change: transform, opacity;
 
 		&-item {
 			@include reset;
