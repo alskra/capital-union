@@ -13,6 +13,8 @@
 	.service-list {
 		@include reset;
 
+		display: flex;
+		flex-flow: column;
 		padding: xxl-to-xs(70, 30) 0;
 
 		.service-item {

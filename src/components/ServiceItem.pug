@@ -1,4 +1,4 @@
-mixin service-item({title, description, content})
+mixin service-item({title, description, content, imgSrc, url})
 	service-item(inline-template)&attributes(attributes)
 		article.service-item
 			.col-main
@@ -19,10 +19,10 @@ mixin service-item({title, description, content})
 				figure.figure
 					.figure-img
 						img.figure-img-element(
-						src="upload/ex-pi.jpg"
-						alt="www.expi.trade"
+						src=imgSrc
+						alt=url
 						)
 
 					figcaption.figure-caption
-						a.figure-caption-link(href="") www.expi.trade
+						a.figure-caption-link(href=`//${url}`)= url
 

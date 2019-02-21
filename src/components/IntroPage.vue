@@ -95,6 +95,13 @@
 		letter-spacing: em(2.7, 36);
 	}
 
+	.actions {
+		@media (width < env(--vw-md)) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
 	.sliding-line {
 		position: absolute;
 		bottom: xxl-to-xs(60, 10);

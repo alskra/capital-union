@@ -74,11 +74,13 @@
 		margin-top: responsive-size(40, 30);
 		margin-left: responsive-size(80, 20);
 		width: percentage(357 / 1054);
+		max-width: 357px;
 		flex-shrink: 0;
 
 		@media (width < env(--vw-md)) {
 			margin-left: 0;
 			width: auto;
+			max-width: none;
 		}
 	}
 
