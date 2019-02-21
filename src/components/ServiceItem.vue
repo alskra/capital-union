@@ -57,9 +57,11 @@
 
 	.footer {
 		display: flex;
+		padding-left: xxl-to-xs(80, 0);
 
 		@media (width < env(--vw-md)) {
 			justify-content: center;
+			padding-left: 0;
 		}
 	}
 </style>
