@@ -21,12 +21,42 @@
 		@include reset;
 
 		display: flex;
+		margin-right: responsive-size(130, 0);
 		border: 2px solid rgba(#030303, 0.1);
 		padding: responsive-size(70, 20) responsive-size(180, 15);
+		width: calc(100% - #{responsive-size(130, 0)});
 		max-width: 1435px;
 
 		@media (width < env(--vw-md)) {
 			flex-flow: column;
+			margin-right: 0;
+			width: 100%;
+		}
+
+		&:nth-child(even) {
+			@media (width >= env(--vw-md)) {
+				margin-right: 0;
+				margin-left: responsive-size(130, 0);
+			}
+
+			.main {
+				&::before {
+					@media (width >= env(--vw-md)) {
+						right: responsive-size(-180, -15);
+						left: auto;
+						margin-right: -2px;
+						margin-left: 0;
+					}
+				}
+			}
+
+			.col-aside {
+				@media (width >= env(--vw-md)) {
+					order: -1;
+					margin-right: responsive-size(100, 20);
+					margin-left: 0;
+				}
+			}
 		}
 	}
 
@@ -37,6 +67,10 @@
 	.header {
 		margin-bottom: responsive-size(50, 30);
 		padding-right: responsive-size(80, 0);
+
+		@media (width < env(--vw-md)) {
+			padding-right: 0;
+		}
 	}
 
 	.title {
@@ -61,7 +95,11 @@
 	.main {
 		position: relative;
 		margin-bottom: responsive-size(50, 30);
-		padding-left: responsive-size(80, 20);
+		padding-left: responsive-size(80, 0);
+
+		@media (width < env(--vw-md)) {
+			padding-left: 0;
+		}
 
 		&::before {
 			content: '';
@@ -80,16 +118,16 @@
 		flex-wrap: wrap;
 		align-items: center;
 		margin: -10px -25px;
-		padding-left: responsive-size(80, 20);
-
-		&-col {
-			margin: 10px 25px;
-			min-width: 0;
-		}
+		padding-left: responsive-size(80, 0);
 
 		@media (width < env(--vw-md)) {
 			justify-content: center;
 			padding-left: 0;
+		}
+
+		&-col {
+			padding: 10px 25px;
+			min-width: 0;
 		}
 	}
 
@@ -105,19 +143,25 @@
 		width: 36px;
 		height: 36px;
 		flex-shrink: 0;
+		color: #61605f;
 		cursor: pointer;
+		transition: color 0.15s;
+
+		&:hover {
+			color: var(--color-primary);
+		}
 	}
 
 	.col-aside {
 		margin-top: responsive-size(40, 30);
-		margin-left: responsive-size(80, 20);
-		width: percentage(357 / 1054);
+		margin-left: responsive-size(100, 20);
+		width: percentage(357 / 1071);
 		max-width: 357px;
 		flex-shrink: 0;
 
 		@media (width < env(--vw-md)) {
 			margin-left: 0;
-			width: auto;
+			width: 100%;
 			max-width: none;
 		}
 	}
