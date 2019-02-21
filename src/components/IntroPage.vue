@@ -92,7 +92,7 @@
 	}
 
 	.title {
-		letter-spacing: rem(2.7);
+		letter-spacing: em(2.7, 36);
 	}
 
 	.sliding-line {

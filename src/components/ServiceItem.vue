@@ -33,7 +33,7 @@
 		color: var(--base-content-headings_-_color);
 		font-size: xxl-to-xs(34, 24);
 		font-weight: var(--base-content-headings_-_font-weight);
-		letter-spacing: rem(2.55);
+		letter-spacing: em(2.55, 34);
 
 		@media (width < env(--vw-md)) {
 			//font-size: rem(34 - 4);
@@ -47,7 +47,7 @@
 		color: var(--base-content-headings_-_color);
 		font-size: var(--base-content_-_font-size);
 		font-weight: var(--base-content-headings_-_font-weight);
-		letter-spacing: rem(1.27);
+		letter-spacing: em(1.27, 17);
 	}
 
 	.main {
