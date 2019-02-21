@@ -78,7 +78,7 @@
 		bottom: xl-to-xs(60, 10);
 		left: 50%;
 		width: 1px;
-		height: xl-to-xs(84, 30);
+		height: xl-to-xs(80, 40);
 		overflow: hidden;
 
 		&::before {

@@ -97,6 +97,17 @@
 			font-size: rem(14);
 			line-height: 1.25;
 			overflow: hidden;
+			white-space: nowrap;
+
+			&::after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 5px;
+				border-top: 5px solid;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+			}
 		}
 	}
 
@@ -111,7 +122,13 @@
 			display: flex;
 			align-items: center;
 			margin-top: 5px;
+			padding-right: 13px;
 			cursor: pointer;
+			transition: transform 0.15s ease;
+
+			&:hover {
+				//transform: translateX(-5px);
+			}
 
 			&-icon {
 				display: flex;
@@ -127,6 +144,7 @@
 				font-size: rem(14);
 				line-height: 1.25;
 				overflow: hidden;
+				white-space: nowrap;
 			}
 		}
 
