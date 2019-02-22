@@ -33,8 +33,8 @@
 		&:not(:disabled) {
 			&:hover,
 			&:focus {
-				border-color: currentColor;
-				color: #232428;
+				border-color: #fafafa;
+				color: #fefefe;
 				background-color: transparent;
 			}
 		}
