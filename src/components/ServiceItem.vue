@@ -18,6 +18,14 @@
 
 <style src="animate.css"></style>
 
+<style lang="scss">
+	:root {
+		--color-ex-pi: #ff9a00;
+		--color-crypto-pi: #f49901;
+		--color-capital-pi: #c61030;
+	}
+</style>
+
 <style lang="scss" scoped>
 	.service-item {
 		@include reset;
@@ -59,6 +67,18 @@
 					margin-left: 0;
 				}
 			}
+		}
+
+		&.ex-pi {
+			--color-primary: var(--color-ex-pi);
+		}
+
+		&.crypto-pi {
+			--color-primary: var(--color-crypto-pi);
+		}
+
+		&.capital-pi {
+			--color-primary: var(--color-capital-pi);
 		}
 	}
 
@@ -111,7 +131,7 @@
 			left: responsive-size(-180, -15);
 			margin-left: -2px;
 			width: 4px;
-			background-color: #ff9a00;
+			background-color: var(--color-primary);
 		}
 	}
 
