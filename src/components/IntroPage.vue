@@ -50,6 +50,7 @@
 			}
 		}
 
+		will-change: transform;
 		animation: intro-page-bg-1_-_background 40s ease-in-out alternate infinite;
 	}
 
@@ -70,6 +71,7 @@
 			}
 		}
 
+		will-change: transform, opacity;
 		animation: intro-page-bg-2_-_background 40s ease-in-out alternate infinite;
 	}
 
@@ -88,6 +90,7 @@
 			}
 		}
 
+		will-change: filter;
 		animation: intro-page-bg-3_-_background 40s ease-in-out alternate infinite;
 	}
 

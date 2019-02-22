@@ -3,7 +3,8 @@ mixin service-item({title, description, content, imgSrc, url})
 		article.service-item
 			.col-main
 				header.header
-					h2.title= title
+					h2.title
+						span(style="display: block;" v-scroll:animate.bounce="handleScroll")= title
 					p.description= description
 
 				.main

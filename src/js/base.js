@@ -34,4 +34,24 @@ requireComponent.keys().forEach(fileName => {
 	Vue.component(componentName, componentConfig);
 });
 
+// Directives
+Vue.directive('scroll', {
+	bind(el, binding) {
+		if (binding.arg === 'animate') {
+			el.style.visibility = 'hidden';
+		}
+
+		const onWindowScroll = (evt) => {
+			if (binding.value(evt, el, binding)) {
+				window.removeEventListener('scroll', onWindowScroll);
+			}
+		};
+
+		window.addEventListener('scroll', onWindowScroll);
+	},
+	// inserted(el, binding) {
+	//
+	// }
+});
+
 export default Vue;

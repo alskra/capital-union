@@ -12,9 +12,24 @@
 			ButtonOutline,
 			IconFacebook,
 			IconLinkedin
+		},
+		methods: {
+			handleScroll(evt, el, binding) {
+				if (el.getBoundingClientRect().top <= window.innerHeight * 2 / 3 &&
+				el.getBoundingClientRect().top >= 0) {
+					el.style.visibility = '';
+					el.classList.add('animated', ...Object.keys(binding.modifiers));
+
+					return true;
+				}
+
+				return false;
+			}
 		}
 	};
 </script>
+
+<style src="animate.css"></style>
 
 <style lang="scss" scoped>
 	.service-item {
