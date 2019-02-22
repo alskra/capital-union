@@ -3,6 +3,7 @@ extends ../../pug/base
 include ../../components/HeaderPage
 include ../../components/IntroPage
 include ../../components/ServiceItem
+include ../../components/SectionContacts
 
 block favicon
 	include ../../pug/favicon
@@ -60,3 +61,5 @@ to protect investment capital, but also to generate an above average return.</p>
 							mapLabel: `Netherlands`,
 							mapSrc: `img/europe-netherlands.svg`
 						}).capital-pi
+
+					+section-contacts()

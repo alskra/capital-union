@@ -3,6 +3,7 @@
 	import IntroPage from './IntroPage';
 	import ServiceList from './ServiceList';
 	import ServiceItem from './ServiceItem';
+	import SectionContacts from './SectionContacts';
 
 	export default {
 		name: 'PageIndex',
@@ -10,7 +11,8 @@
 			HeaderPage,
 			IntroPage,
 			ServiceList,
-			ServiceItem
+			ServiceItem,
+			SectionContacts
 		}
 	};
 </script>

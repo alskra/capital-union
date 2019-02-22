@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&subset=cyrillic,cyrillic-ext,latin-ext');
 
 :root {
+	--current-vw: 100vw;
 	--color-primary: #f88200;
 	font-size: percentage(10 / 16);
+
+	@media (width < env(--vw-xs)) {
+		--current-vw: 320px;
+	}
+
+	@media (width > env(--vw-xxl)) {
+		--current-vw: 1920px;
+	}
 }
 
 *,

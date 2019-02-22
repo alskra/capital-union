@@ -111,7 +111,7 @@
 		(#{if(unit($value-from) != 'rem', strip-unit($value-from), strip-unit($value-from) * 10)} -
 		#{if(unit($value-to) != 'rem', strip-unit($value-to), strip-unit($value-to) * 10)}) *
 
-		(#{$base-from} - 100vw) /
+		(#{$base-from} - var(--current-vw)) /
 		(#{strip-unit($base-from)} - #{strip-unit($base-to)})
 	);
 }

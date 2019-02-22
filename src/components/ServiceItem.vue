@@ -42,12 +42,13 @@
 		border: 2px solid rgba(#030303, 0.1);
 		padding: responsive-size(70, 70) responsive-size(180, 15) responsive-size(120, 20);
 		width: calc(100% - #{responsive-size(130, 0)});
-		max-width: 1435px;
+		max-width: responsive-size(1435, 320);
 
 		@media (width < env(--vw-md)) {
 			flex-flow: column;
 			margin-right: 0;
 			width: 100%;
+			max-width: none;
 		}
 
 		&:nth-child(even) {
