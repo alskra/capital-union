@@ -1,4 +1,4 @@
-mixin service-item({title, description, content, imgSrc, url, logoIcon})
+mixin service-item({title, description, content, imgSrc, url, logoIcon, mapLabel, mapSrc})
 	service-item(inline-template)&attributes(attributes)
 		article.service-item
 			.col-main
@@ -65,4 +65,12 @@ mixin service-item({title, description, content, imgSrc, url, logoIcon})
 						href=`//${url}`
 						target="_blank"
 						)= url
+
+				.map
+					img.map-img(
+					src=mapSrc
+					alt=mapLabel
+					)
+
+					.map-label(class=mapLabel.toLowerCase())= mapLabel
 

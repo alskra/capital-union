@@ -35,7 +35,8 @@
 		}
 
 		&:not(:disabled) {
-			&:hover {
+			&:hover,
+			&:focus {
 				border-color: var(--color-primary);
 				color: #ffffff;
 				background-color: var(--color-primary);

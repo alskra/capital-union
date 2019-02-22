@@ -40,7 +40,7 @@
 		position: relative;
 		margin-right: responsive-size(130, 0);
 		border: 2px solid rgba(#030303, 0.1);
-		padding: responsive-size(70, 70) responsive-size(180, 15) responsive-size(70, 20);
+		padding: responsive-size(70, 70) responsive-size(180, 15) responsive-size(120, 20);
 		width: calc(100% - #{responsive-size(130, 0)});
 		max-width: 1435px;
 
@@ -72,6 +72,20 @@
 					order: -1;
 					margin-right: responsive-size(100, 20);
 					margin-left: 0;
+				}
+			}
+
+			.logo {
+				@media (width >= env(--vw-md)) {
+					right: auto;
+					left: 15px;
+				}
+			}
+
+			.map {
+				@media (width >= env(--vw-md)) {
+					right: auto;
+					left: responsive-size(-160, 50);
 				}
 			}
 		}
@@ -176,8 +190,13 @@
 		cursor: pointer;
 		transition: color var(--base-button_-_transition-duration);
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: var(--color-primary);
+		}
+
+		&-icon {
+			display: block;
 		}
 	}
 
@@ -213,6 +232,8 @@
 	.figure {
 		@include reset;
 
+		position: relative;
+		z-index: 1;
 		width: 357px;
 		max-width: 100%;
 
@@ -265,6 +286,50 @@
 				&:hover {
 					color: var(--color-primary);
 				}
+			}
+		}
+	}
+
+	.map {
+		/*310 - 15*/
+		position: absolute;
+		right: responsive-size(-160, 50);
+		bottom: responsive-size(65, 20);
+		width: responsive-size(300, 150);
+
+		@media (width < env(--vw-md)) {
+			display: none;
+		}
+
+		&-img {
+			display: block;
+		}
+
+		&-label {
+			@include reset;
+
+			position: absolute;
+			font-size: rem(12);
+			line-height: 1.25;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: default;
+			transform: translateX(-50%);
+
+			&.estonia {
+				top: 48%;
+				left: 54%;
+			}
+
+			&.singapore {
+				top: auto;
+				bottom: 7%;
+				left: 90%;
+			}
+
+			&.netherlands {
+				top: 67%;
+				left: 27%;
 			}
 		}
 	}

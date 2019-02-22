@@ -20,10 +20,8 @@
 					(clientRect.top < 0 && clientRect.bottom > vh)
 				) {
 					el.style.animationPlayState = 'running';
-					// el.style.animationName = '';
 				} else {
 					el.style.animationPlayState = 'paused';
-					// el.style.animationName = 'none';
 				}
 
 				return false;
