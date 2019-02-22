@@ -101,6 +101,7 @@
 		}
 
 		&-label {
+			min-width: 40px;
 			font-size: rem(14);
 			line-height: 1.25;
 			overflow: hidden;
@@ -130,7 +131,7 @@
 			display: flex;
 			align-items: center;
 			margin-top: 5px;
-			padding-right: 13px;
+			//padding-right: 13px;
 			cursor: pointer;
 			transition: transform 0.15s ease;
 
@@ -149,6 +150,7 @@
 			}
 
 			&-label {
+				min-width: 40px;
 				font-size: rem(14);
 				line-height: 1.25;
 				overflow: hidden;
