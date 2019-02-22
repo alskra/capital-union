@@ -4,10 +4,18 @@ mixin service-item({title, description, content, imgSrc, url})
 			.col-main
 				header.header
 					h2.title
-						span(style="display: block;" v-scroll:animate.bounce="handleScroll")= title
-					p.description= description
+						span(
+						:style="{display: 'block'}"
+						v-scroll:animate.fade-in-up="handleScroll"
+						)= title
 
-				.main
+					p.description
+						span(
+						:style="{display: 'block'}"
+						v-scroll:animate.fade-in-up="handleScroll"
+						)= description
+
+				.main(v-scroll:animate.fade-in-up="handleScroll")
 					base-content!= content
 
 				footer.footer

@@ -41,14 +41,17 @@ Vue.directive('scroll', {
 			el.style.visibility = 'hidden';
 		}
 
-		const onWindowScroll = (evt) => {
+		el.onWindowScroll = (evt) => {
 			if (binding.value(evt, el, binding)) {
-				window.removeEventListener('scroll', onWindowScroll);
+				window.removeEventListener('scroll', el.onWindowScroll);
 			}
 		};
 
-		window.addEventListener('scroll', onWindowScroll);
+		window.addEventListener('scroll', el.onWindowScroll);
 	},
+	unbind(el) {
+		window.removeEventListener('scroll', el.onWindowScroll);
+	}
 	// inserted(el, binding) {
 	//
 	// }

@@ -8,6 +8,24 @@
 		name: 'IntroPage',
 		components: {
 			ButtonOutline
+		},
+		methods: {
+			handleScroll(evt, el) {
+				const clientRect = el.parentElement.getBoundingClientRect();
+				const vh = window.innerHeight;
+
+				if (
+					(clientRect.top < vh && clientRect.top >= 0) ||
+					(clientRect.bottom < vh && clientRect.bottom >= 0) ||
+					(clientRect.top < 0 && clientRect.bottom >= vh)
+				) {
+					el.style.animationPlayState = 'running';
+				} else {
+					el.style.animationPlayState = 'paused';
+				}
+
+				return false;
+			}
 		}
 	};
 </script>

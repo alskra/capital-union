@@ -15,10 +15,20 @@
 		},
 		methods: {
 			handleScroll(evt, el, binding) {
-				if (el.getBoundingClientRect().top <= window.innerHeight * 2 / 3 &&
-				el.getBoundingClientRect().top >= 0) {
+				const clientRect = el.getBoundingClientRect();
+				const vh = window.innerHeight;
+
+				if (
+					binding.arg === 'animate' &&
+					clientRect.top <= vh * 2 / 3 &&
+					clientRect.top >= 0
+				) {
 					el.style.visibility = '';
-					el.classList.add('animated', ...Object.keys(binding.modifiers));
+					el.classList.add(
+						'animated',
+						...Object.keys(binding.modifiers)
+							.map(item => item.replace(/-([a-z])/g, match => match[1].toUpperCase()))
+					);
 
 					return true;
 				}
