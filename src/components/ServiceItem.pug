@@ -3,20 +3,21 @@ mixin service-item({title, description, content, imgSrc, url})
 		article.service-item
 			.col-main
 				header.header
-					h2.title
+					h2.title(:style="{overflow: 'hidden'}")
 						span(
 						:style="{display: 'block'}"
-						v-scroll:animate.fade-in-up="handleScroll"
+						v-scroll:animate="'fadeInUp'"
 						)= title
 
-					p.description
+					p.description(:style="{overflow: 'hidden'}")
 						span(
 						:style="{display: 'block'}"
-						v-scroll:animate.fade-in-up="handleScroll"
+						v-scroll:animate="'fadeInUp'"
 						)= description
 
-				.main(v-scroll:animate.fade-in-up="handleScroll")
-					base-content!= content
+				.main(:style="{overflow: 'hidden'}")
+					div(v-scroll:animate="'fadeInUp'")
+						base-content!= content
 
 				footer.footer
 					.footer-col
@@ -41,11 +42,15 @@ mixin service-item({title, description, content, imgSrc, url})
 
 			aside.col-aside
 				figure.figure
-					.figure-img
+					a.figure-img(
+					href=`//${url}`
+					target="_blank"
+					)
 						img.figure-img-element(
 						src=imgSrc
 						srcset=`${imgSrc.replace(/\.(jpg|png)$/, '@2x.$1')} 2x`
 						alt=url
+						v-scroll:load="'fadeIn'"
 						)
 
 					figcaption.figure-caption

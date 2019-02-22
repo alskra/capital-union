@@ -25,8 +25,8 @@
 		border-color,
 		background-color,
 		box-shadow;
-		--base-button_-_transition-duration: 0.15s;
-		--base-button_-_transition-timing-function: ease-in-out;
+		--base-button_-_transition-duration: 0.2s;
+		--base-button_-_transition-timing-function: ease;
 	}
 </style>
 

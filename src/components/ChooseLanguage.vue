@@ -166,12 +166,12 @@
 
 			&-enter-active {
 				transform-origin: 50% 0;
-				animation: dropdown_-_scaleY-fade 0.15s ease backwards;
+				animation: dropdown_-_scaleY-fade 0.2s backwards;
 			}
 
 			&-leave-active {
 				transform-origin: 50% 0;
-				animation: dropdown_-_scaleY-fade 0.15s ease reverse forwards;
+				animation: dropdown_-_scaleY-fade 0.2s reverse forwards;
 			}
 		}
 	}

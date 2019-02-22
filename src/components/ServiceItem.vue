@@ -12,29 +12,6 @@
 			ButtonOutline,
 			IconFacebook,
 			IconLinkedin
-		},
-		methods: {
-			handleScroll(evt, el, binding) {
-				const clientRect = el.getBoundingClientRect();
-				const vh = window.innerHeight;
-
-				if (
-					binding.arg === 'animate' &&
-					clientRect.top <= vh * 2 / 3 &&
-					clientRect.top >= 0
-				) {
-					el.style.visibility = '';
-					el.classList.add(
-						'animated',
-						...Object.keys(binding.modifiers)
-							.map(item => item.replace(/-([a-z])/g, match => match[1].toUpperCase()))
-					);
-
-					return true;
-				}
-
-				return false;
-			}
 		}
 	};
 </script>
@@ -170,7 +147,7 @@
 		flex-shrink: 0;
 		color: #61605f;
 		cursor: pointer;
-		transition: color 0.15s;
+		transition: color var(--base-button_-_transition-duration);
 
 		&:hover {
 			color: var(--color-primary);
@@ -202,10 +179,13 @@
 		}
 
 		&-img {
+			@include reset;
+
 			position: relative;
 			box-shadow: responsive-size(23, 23 / 2) responsive-size(27, 27 / 2) responsive-size(50, 50 / 2)
 			#41444d;
 			background-color: #3e3d3d;
+			cursor: pointer;
 
 			&::before {
 				content: '';
@@ -238,7 +218,7 @@
 				font-weight: 700;
 				line-height: 1.25;
 				cursor: pointer;
-				transition: color 0.15s ease-in-out;
+				transition: color var(--base-button_-_transition-duration);
 
 				&:hover {
 					color: var(--color-primary);
