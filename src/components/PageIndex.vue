@@ -4,6 +4,7 @@
 	import ServiceList from './ServiceList';
 	import ServiceItem from './ServiceItem';
 	import SectionContacts from './SectionContacts';
+	import FooterPage from './FooterPage';
 
 	export default {
 		name: 'PageIndex',
@@ -12,11 +13,11 @@
 			IntroPage,
 			ServiceList,
 			ServiceItem,
-			SectionContacts
+			SectionContacts,
+			FooterPage
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
