@@ -15,8 +15,8 @@ mixin service-item({title, description, content, imgSrc, url})
 						v-scroll:animate="'fadeInUp'"
 						)= description
 
-				.main(:style="{overflow: 'hidden'}")
-					div(v-scroll:animate="'fadeInUp'")
+				.main
+					div(v-scroll:animate="'fadeIn'")
 						base-content!= content
 
 				footer.footer

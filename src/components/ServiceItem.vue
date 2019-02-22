@@ -182,9 +182,6 @@
 			@include reset;
 
 			position: relative;
-			box-shadow: responsive-size(23, 23 / 2) responsive-size(27, 27 / 2) responsive-size(50, 50 / 2)
-			#41444d;
-			background-color: #3e3d3d;
 			cursor: pointer;
 
 			&::before {
@@ -200,6 +197,9 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				box-shadow: responsive-size(23, 23 / 2) responsive-size(27, 27 / 2) responsive-size(50, 50 / 2)
+				#41444d;
+				background-color: #3e3d3d;
 			}
 		}
 

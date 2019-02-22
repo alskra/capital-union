@@ -44,6 +44,7 @@ const animateOnScroll = (evt, el, binding) => {
 		clientRect.top <= vh * 2 / 3
 	) {
 		el.style.opacity = '';
+		el.style.visibility = '';
 		el.classList.add('animated', binding.value);
 
 		return true;
@@ -64,6 +65,7 @@ const loadOnScroll = (evt, el, binding) => {
 			el.removeEventListener('load', onImageLoad);
 
 			el.style.opacity = '';
+			el.style.visibility = '';
 			el.classList.add('animated', binding.value);
 		});
 
@@ -80,8 +82,10 @@ Vue.directive('scroll', {
 	bind(el, binding) {
 		if (binding.arg === 'animate') {
 			el.style.opacity = '0';
+			el.style.visibility = 'hidden';
 		} else if (binding.arg === 'load') {
 			el.style.opacity = '0';
+			el.style.visibility = 'hidden';
 
 			el.dataset.src = el.getAttribute('src');
 			el.dataset.srcset = el.getAttribute('srcset');
@@ -109,6 +113,9 @@ Vue.directive('scroll', {
 		};
 
 		window.addEventListener('scroll', el.onWindowScroll);
+	},
+	inserted(el) {
+		el.onWindowScroll();
 	},
 	unbind(el) {
 		window.removeEventListener('scroll', el.onWindowScroll);
