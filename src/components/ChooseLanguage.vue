@@ -30,7 +30,7 @@
 				default() {
 					return {
 						code: 'en-UK',
-						label: 'en'
+						label: 'EN'
 					};
 				}
 			}
@@ -107,14 +107,24 @@
 			overflow: hidden;
 			white-space: nowrap;
 
-			&::after {
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				margin-left: 5px;
-				border-top: 5px solid;
-				border-right: 4px solid transparent;
-				border-left: 4px solid transparent;
+			&:first-child {
+				margin-right: 10px;
+
+				@media (width < env(--vw-md)) {
+					display: none;
+				}
+			}
+
+			&:last-child {
+				&::after {
+					content: '';
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 5px;
+					border-top: 5px solid;
+					border-right: 4px solid transparent;
+					border-left: 4px solid transparent;
+				}
 			}
 		}
 	}
@@ -123,17 +133,36 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
+		margin-top: 2px;
 		will-change: transform, opacity;
+
+		&.scaleY-fade {
+			@keyframes dropdown_-_scaleY-fade {
+				0% {
+					transform: scaleY(0);
+					opacity: 0;
+				}
+			}
+
+			&-enter-active {
+				transform-origin: 50% 0;
+				animation: dropdown_-_scaleY-fade 0.2s backwards;
+			}
+
+			&-leave-active {
+				transform-origin: 50% 0;
+				animation: dropdown_-_scaleY-fade 0.2s reverse forwards;
+			}
+		}
 
 		&-item {
 			@include reset;
 
 			display: flex;
 			align-items: center;
-			margin-top: 5px;
-			//padding-right: 13px;
+			padding: 2px 0;
 			cursor: pointer;
-			transition: transform 0.15s ease;
+			//transition: transform 0.15s;
 
 			&:hover {
 				//transform: translateX(-5px);
@@ -155,25 +184,6 @@
 				line-height: 1.25;
 				overflow: hidden;
 				white-space: nowrap;
-			}
-		}
-
-		&.scaleY-fade {
-			@keyframes dropdown_-_scaleY-fade {
-				0% {
-					transform: scaleY(0);
-					opacity: 0;
-				}
-			}
-
-			&-enter-active {
-				transform-origin: 50% 0;
-				animation: dropdown_-_scaleY-fade 0.2s backwards;
-			}
-
-			&-leave-active {
-				transform-origin: 50% 0;
-				animation: dropdown_-_scaleY-fade 0.2s reverse forwards;
 			}
 		}
 	}

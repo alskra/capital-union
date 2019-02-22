@@ -5,6 +5,8 @@ mixin choose-language({languages})
 			type="button"
 			@click="opened = !opened"
 			)
+				span.button-label Choose a language:
+
 				span.button-icon
 					component(:is="`icon-lang-${language.code.toLowerCase()}`")
 

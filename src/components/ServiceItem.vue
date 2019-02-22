@@ -5,13 +5,19 @@
 	import ButtonOutline from './ButtonOutline';
 	import IconFacebook from './IconFacebook';
 	import IconLinkedin from './IconLinkedin';
+	import IconExPi from './IconExPi';
+	import IconCryptoPi from './IconCryptoPi';
+	import IconCapitalPi from './IconCapitalPi';
 
 	export default {
 		name: 'ServiceItem',
 		components: {
 			ButtonOutline,
 			IconFacebook,
-			IconLinkedin
+			IconLinkedin,
+			IconExPi,
+			IconCryptoPi,
+			IconCapitalPi
 		}
 	};
 </script>
@@ -31,9 +37,10 @@
 		@include reset;
 
 		display: flex;
+		position: relative;
 		margin-right: responsive-size(130, 0);
 		border: 2px solid rgba(#030303, 0.1);
-		padding: responsive-size(70, 20) responsive-size(180, 15);
+		padding: responsive-size(70, 70) responsive-size(180, 15) responsive-size(70, 20);
 		width: calc(100% - #{responsive-size(130, 0)});
 		max-width: 1435px;
 
@@ -185,6 +192,21 @@
 			margin-left: 0;
 			width: 100%;
 			max-width: none;
+		}
+	}
+
+	.logo {
+		@include reset;
+
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		height: 40px;
+		cursor: pointer;
+
+		&-img {
+			display: block;
+			height: 100%;
 		}
 	}
 

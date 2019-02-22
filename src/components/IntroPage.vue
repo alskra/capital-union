@@ -20,8 +20,10 @@
 					(clientRect.top < 0 && clientRect.bottom > vh)
 				) {
 					el.style.animationPlayState = 'running';
+					// el.style.animationName = '';
 				} else {
 					el.style.animationPlayState = 'paused';
+					// el.style.animationName = 'none';
 				}
 
 				return false;
@@ -104,11 +106,11 @@
 
 		@keyframes intro-page-bg-3_-_background {
 			100% {
-				filter: blur(5px);
+				opacity: 0.01;
 			}
 		}
 
-		will-change: filter;
+		will-change: opacity;
 		animation: intro-page-bg-3_-_background 40s ease-in-out alternate infinite;
 	}
 
@@ -131,9 +133,7 @@
 		height: xxl-to-xs(80, 40);
 		overflow: hidden;
 
-		&::before {
-			content: '';
-			display: block;
+		&-inner {
 			height: 100%;
 			background-color: #807e89;
 
@@ -151,6 +151,7 @@
 				}
 			}
 
+			will-change: height, transform;
 			animation: intro-page-sliding-line_-_slide 1.5s ease-in backwards infinite;
 		}
 	}

@@ -118,6 +118,7 @@ Vue.directive('scroll', {
 		el.onWindowScroll();
 	},
 	unbind(el) {
+		delete el.onWindowScroll;
 		window.removeEventListener('scroll', el.onWindowScroll);
 	}
 });

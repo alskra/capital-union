@@ -1,4 +1,4 @@
-mixin service-item({title, description, content, imgSrc, url})
+mixin service-item({title, description, content, imgSrc, url, logoIcon})
 	service-item(inline-template)&attributes(attributes)
 		article.service-item
 			.col-main
@@ -42,6 +42,12 @@ mixin service-item({title, description, content, imgSrc, url})
 								icon-linkedin.network-item-icon
 
 			aside.col-aside
+				a.logo(
+				href=`//${url}`
+				target="_blank"
+				)
+					svg.logo-img(is=logoIcon)
+
 				figure.figure
 					a.figure-img(
 					href=`//${url}`
