@@ -15,9 +15,9 @@
 				const vh = window.innerHeight;
 
 				if (
-					(clientRect.top < vh && clientRect.top >= 0) ||
-					(clientRect.bottom < vh && clientRect.bottom >= 0) ||
-					(clientRect.top < 0 && clientRect.bottom >= vh)
+					(clientRect.top >= 0 && clientRect.top < vh) ||
+					(clientRect.bottom > 0 && clientRect.bottom <= vh) ||
+					(clientRect.top < 0 && clientRect.bottom > vh)
 				) {
 					el.style.animationPlayState = 'running';
 				} else {
