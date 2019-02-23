@@ -24,7 +24,8 @@
 		}
 
 		&.mask {
-			background: url("../img/footer-bg.jpg") no-repeat 50% 50% fixed;
+			background: url("../img/footer-bg.jpg") no-repeat 50% 50%;
+			background-attachment: fixed;
 			background-size: cover;
 			mask: url("../img/pi-capital-union-mask.png") no-repeat 50% 50% / cover;
 		}

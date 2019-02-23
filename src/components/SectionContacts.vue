@@ -27,7 +27,8 @@
 		position: relative;
 		padding: responsive-size(100, 50) vw(240) responsive-size(100, 30) vw(450);
 		width: vw(1190);
-		background: url("../img/contacts-bg.jpg") no-repeat 50% 50% fixed #252831;
+		background: url("../img/contacts-bg.jpg") no-repeat 50% 50% #252831;
+		background-attachment: fixed;
 		background-size: cover;
 
 		@media (width < env(--vw-md)) {
