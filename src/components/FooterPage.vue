@@ -3,7 +3,10 @@
 
 <script>
 	export default {
-		name: 'FooterPage'
+		name: 'FooterPage',
+		mounted() {
+			document.documentElement.style.mask !== undefined ? this.$refs.mask.classList.add('mask') : null;
+		}
 	};
 </script>
 
@@ -14,8 +17,15 @@
 
 	.capital-union {
 		height: vw(384);
-		background: url("../img/footer-bg.jpg") no-repeat 50% 50% / cover fixed;
-		mask: url("../img/pi-capital-union-mask.png") no-repeat 50% 50% / cover;
+
+		&:not(.mask) {
+			background: url("../img/pi-capital-union-no-mask.jpg") no-repeat 50% 50% / cover;
+		}
+
+		&.mask {
+			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / cover fixed;
+			mask: url("../img/pi-capital-union-mask.png") no-repeat 50% 50% / cover;
+		}
 	}
 
 	.info {
