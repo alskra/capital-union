@@ -13,9 +13,12 @@
 <style lang="scss" scoped>
 	.footer-page {
 		@include reset;
+
+		overflow: hidden;
 	}
 
 	.capital-union {
+		margin-bottom: responsive-size(200, 100);
 		height: vw(384);
 
 		&:not(.mask) {
