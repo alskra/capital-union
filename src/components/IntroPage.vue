@@ -45,7 +45,7 @@
 
 		.base-container {
 			position: relative;
-			padding-left: 40px;
+			padding-left: responsive-size(70, 30);
 			max-width: 800px;
 		}
 
@@ -124,7 +124,7 @@
 	}
 
 	.title {
-		margin-left: -30px;
+		margin-left: responsive-size(-60, -20);
 		letter-spacing: em(2.7, 36);
 	}
 
@@ -132,7 +132,7 @@
 		@media (width < env(--vw-md)) {
 			display: flex;
 			justify-content: center;
-			margin-left: -30px;
+			margin-left: responsive-size(-60, -20);
 		}
 	}
 
