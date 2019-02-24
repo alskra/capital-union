@@ -1,7 +1,7 @@
 {
 	"version": 2,
 	"name": "capital-union",
-	"alias": "capital-union-frontend.now.sh",
+	"alias": "cu-frontend.now.sh",
 	"builds": [
 		{
 			"src": "package.json",
