@@ -10,6 +10,12 @@ const pages = {
 		filename: 'index.html',
 		title: ''
 	},
+	'index-v-2': {
+		entry: 'src/pages/index/index.js',
+		template: 'src/pages/index/index-v-2.pug',
+		filename: 'index-v-2.html',
+		title: ''
+	}
 };
 
 module.exports = {

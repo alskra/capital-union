@@ -38,18 +38,19 @@
 		flex-flow: column;
 		justify-content: center;
 		position: relative;
-		padding: xxl-to-xs(60 + 58 + 30, 15 + 40 + 20) 0 xxl-to-xs(60 + 80 + 30, 15 + 40 + 20);
+		padding: responsive-size(60 + 58 + 30, 15 + 40 + 20) 0 responsive-size(60 + 80 + 30, 15 + 40 + 20);
 		min-height: 100vh;
 		overflow: hidden;
 		background-color: #020202;
 
 		.base-container {
 			position: relative;
+			padding-left: 40px;
 			max-width: 800px;
 		}
 
 		.base-content {
-			margin-bottom: xxl-to-xs(70, 40);
+			margin-bottom: responsive-size(70, 40);
 		}
 	}
 
@@ -113,6 +114,7 @@
 	}
 
 	.title {
+		margin-left: -30px;
 		letter-spacing: em(2.7, 36);
 	}
 
@@ -120,15 +122,16 @@
 		@media (width < env(--vw-md)) {
 			display: flex;
 			justify-content: center;
+			margin-left: -30px;
 		}
 	}
 
 	.sliding-line {
 		position: absolute;
-		bottom: xxl-to-xs(60, 10);
+		bottom: responsive-size(60, 10);
 		left: 50%;
 		width: 1px;
-		height: xxl-to-xs(80, 40);
+		height: responsive-size(80, 40);
 		overflow: hidden;
 
 		&-inner {

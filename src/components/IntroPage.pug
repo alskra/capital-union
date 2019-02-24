@@ -1,8 +1,11 @@
-mixin intro-page()
+mixin intro-page({variant} = {})
 	intro-page(inline-template)&attributes(attributes)
 		.intro-page
 			.bg-1(v-scroll="handleScroll")
-			.bg-2(v-scroll="handleScroll")
+
+			if variant !== 2
+				.bg-2(v-scroll="handleScroll")
+
 			.bg-3(v-scroll="handleScroll")
 
 			base-container
