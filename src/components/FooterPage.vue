@@ -13,8 +13,6 @@
 <style lang="scss" scoped>
 	.footer-page {
 		@include reset;
-
-		overflow: hidden;
 	}
 
 	.capital-union {

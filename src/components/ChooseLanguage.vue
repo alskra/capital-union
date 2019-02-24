@@ -131,6 +131,7 @@
 
 	.dropdown {
 		position: absolute;
+		z-index: 1000;
 		top: 100%;
 		left: 0;
 		margin-top: 2px;
