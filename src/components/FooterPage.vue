@@ -26,11 +26,11 @@
 		}
 
 		&.mask {
-			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / 100% auto fixed;
+			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / 100vw auto fixed;
 			mask: url("../img/pi-capital-union-mask.svg") no-repeat 50% 50% / contain;
 
 			@media (max-aspect-ratio: 1824 / 1140) {
-				background-size: auto 100%;
+				background-size: auto 100vh;
 			}
 		}
 	}

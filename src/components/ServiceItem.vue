@@ -222,6 +222,7 @@
 		top: 15px;
 		right: 15px;
 		height: 40px;
+		color: #000000;
 		cursor: pointer;
 
 		&-img {
