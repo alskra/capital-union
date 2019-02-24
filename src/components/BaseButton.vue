@@ -43,6 +43,7 @@
 		text-align: center;
 		overflow: hidden;
 		white-space: nowrap;
+		user-select: none;
 		transition-property: var(--base-button_-_transition-property);
 		transition-duration: var(--base-button_-_transition-duration);
 		transition-timing-function: var(--base-button_-_transition-timing-function);
