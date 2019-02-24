@@ -38,7 +38,7 @@
 		flex-flow: column;
 		justify-content: center;
 		position: relative;
-		padding: xxl-to-xs(60 + 58 + 30, 10 + 40 + 20) 0 xxl-to-xs(60 + 80 + 30, 10 + 40 + 20);
+		padding: xxl-to-xs(60 + 58 + 30, 15 + 40 + 20) 0 xxl-to-xs(60 + 80 + 30, 15 + 40 + 20);
 		min-height: 100vh;
 		overflow: hidden;
 		background-color: #020202;

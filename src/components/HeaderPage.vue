@@ -17,7 +17,7 @@
 <style lang="scss">
 	:root {
 		--header-page_-_color: #181716;
-		--header-page_-_padding-top: #{xxl-to-xs(60, 10)};
+		--header-page_-_padding-top: #{xxl-to-xs(60, 15)};
 	}
 </style>
 

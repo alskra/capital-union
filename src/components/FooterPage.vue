@@ -19,15 +19,16 @@
 		height: vw(384);
 
 		&:not(.mask) {
-			background: url("../img/pi-capital-union-no-mask.jpg") no-repeat 50% 50%;
-			background-size: cover;
+			background: url("../img/pi-capital-union-no-mask.png") no-repeat 50% 50% / contain;
 		}
 
 		&.mask {
-			background: url("../img/footer-bg.jpg") no-repeat 50% 50%;
-			background-attachment: fixed;
-			background-size: cover;
-			mask: url("../img/pi-capital-union-mask.png") no-repeat 50% 50% / cover;
+			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / 100% auto fixed;
+			mask: url("../img/pi-capital-union-mask.svg") no-repeat 50% 50% / contain;
+
+			@media (max-aspect-ratio: 1824 / 1140) {
+				background-size: auto 100%;
+			}
 		}
 	}
 
