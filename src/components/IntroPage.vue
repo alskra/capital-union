@@ -61,7 +61,7 @@
 		bottom: 0;
 		left: 0;
 		background: url("../img/intro-bg-1.jpg") no-repeat 50% 50% / cover;
-		transform-origin: 30% 75%;
+		transform-origin: 50% 50%;
 
 		@keyframes intro-page-bg-1_-_background {
 			100% {
@@ -71,6 +71,16 @@
 
 		will-change: transform;
 		animation: intro-page-bg-1_-_background 40s ease-in-out alternate infinite;
+
+		&.variant-2 {
+			@keyframes intro-page-bg-1-variant-2_-_background {
+				100% {
+					transform: scale(1.5);
+				}
+			}
+
+			animation-name: intro-page-bg-1-variant-2_-_background;
+		}
 	}
 
 	.bg-2 {

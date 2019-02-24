@@ -1,7 +1,10 @@
 mixin intro-page({variant} = {})
 	intro-page(inline-template)&attributes(attributes)
 		.intro-page
-			.bg-1(v-scroll="handleScroll")
+			.bg-1(
+			class={'variant-2': variant === 2}
+			v-scroll="handleScroll"
+			)
 
 			if variant !== 2
 				.bg-2(v-scroll="handleScroll")
