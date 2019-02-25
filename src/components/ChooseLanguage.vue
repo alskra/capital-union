@@ -67,10 +67,7 @@
 				color: var(--header-page_-_color);
 
 				&-label {
-					text-shadow: 0 -1px #000000,
-					1px 0 #000000,
-					0 1px #000000,
-					-1px 0 #000000;
+					text-shadow: var(--header-page-text-shadow);
 				}
 			}
 		}

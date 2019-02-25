@@ -5,7 +5,7 @@
 	export default {
 		name: 'FooterPage',
 		mounted() {
-			document.documentElement.style.mask !== undefined ? this.$refs.mask.classList.add('mask') : null;
+			document.documentElement.style.WebkitMaskClip !== undefined ? this.$refs.mask.classList.add('mask') : null;
 		}
 	};
 </script>

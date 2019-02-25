@@ -21,13 +21,13 @@
 			}
 			
 		</style>
-	<link href="/css/chunk-common.247363e1.css" rel="preload" as="style">
+	<link href="/css/chunk-common.ebf28d0f.css" rel="preload" as="style">
 	<link href="/css/chunk-vendors.50b040c1.css" rel="preload" as="style">
-	<link href="/js/chunk-common.096eabbd.js" rel="modulepreload" as="script">
-	<link href="/js/chunk-vendors.c6f9c87b.js" rel="modulepreload" as="script">
+	<link href="/js/chunk-common.18cf27f2.js" rel="modulepreload" as="script">
+	<link href="/js/chunk-vendors.3418dd94.js" rel="modulepreload" as="script">
 	<link href="/js/index-v-2.8a82c564.js" rel="modulepreload" as="script">
 	<link href="/css/chunk-vendors.50b040c1.css" rel="stylesheet">
-	<link href="/css/chunk-common.247363e1.css" rel="stylesheet">
+	<link href="/css/chunk-common.ebf28d0f.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 						<choose-language class="theme-header right" inline-template :language="{code: 'en-UK', label: 'EN'}">
 							<div class="choose-language" ref="choose-language">
 								<button class="button" type="button" @click="opened = !opened"><span class="button-label">Choose a language:</span><span class="button-icon">
-										<component :is="`icon-lang-${language.code.toLowerCase()}`"></component>
+										<component :is="'icon-lang-' + language.code.toLowerCase()"></component>
 									</span><span class="button-label">{{ language.label }}</span></button>
 								<transition name="scaleY-fade">
 									<div class="dropdown" v-if="opened"><a class="dropdown-item" href="/" v-if="language.code !== 'en-UK'"><span class="dropdown-item-icon">
@@ -265,8 +265,8 @@
 			</footer-page>
 		</template>
 	</base-page>
-	<script type="module" src="/js/chunk-vendors.c6f9c87b.js"></script>
-	<script type="module" src="/js/chunk-common.096eabbd.js"></script>
+	<script type="module" src="/js/chunk-vendors.3418dd94.js"></script>
+	<script type="module" src="/js/chunk-common.18cf27f2.js"></script>
 	<script type="module" src="/js/index-v-2.8a82c564.js"></script>
 	<script>
 		! function() {
@@ -283,8 +283,8 @@
 		}();
 
 	</script>
-	<script type="text/javascript" src="/js/chunk-vendors-legacy.0bc8f94d.js" nomodule></script>
-	<script type="text/javascript" src="/js/chunk-common-legacy.cea89c3b.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-vendors-legacy.d9d016eb.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-common-legacy.68a75b92.js" nomodule></script>
 	<script type="text/javascript" src="/js/index-v-2-legacy.8a82c564.js" nomodule></script>
 </body>
 

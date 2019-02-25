@@ -8,7 +8,7 @@ mixin choose-language({languages})
 				span.button-label Choose a language:
 
 				span.button-icon
-					component(:is="`icon-lang-${language.code.toLowerCase()}`")
+					component(:is="'icon-lang-' + language.code.toLowerCase()")
 
 				span.button-label {{ language.label }}
 

@@ -16,8 +16,12 @@
 
 <style lang="scss">
 	:root {
-		--header-page_-_color: #181716;
+		--header-page_-_color: #ffffff;
 		--header-page_-_padding-top: #{xxl-to-xs(60, 15)};
+		--header-page-text-shadow: 0 -1px #000000,
+		1px 0 #000000,
+		0 1px #000000,
+		-1px 0 #000000;
 	}
 </style>
 
