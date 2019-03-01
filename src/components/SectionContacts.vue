@@ -17,6 +17,11 @@
 			return {
 				feedbackShow: false
 			};
+		},
+		methods: {
+			clickOnButton() {
+				alert('Button clicked!!')
+			}
 		}
 	};
 </script>
