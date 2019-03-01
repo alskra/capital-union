@@ -1,5 +1,8 @@
 <template lang="pug">
-	.base-button(:is="tag")
+	.base-button(
+	:is="tag"
+	v-on="$listeners"
+	)
 		span.icon
 			slot(name="icon")
 

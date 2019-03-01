@@ -3,7 +3,7 @@ include FeedbackForm
 mixin section-contacts
 	section-contacts(inline-template)&attributes(attributes)
 		section.section-contacts
-			.body
+			.body(id="contacts")
 				img.logo-pi(
 				src="img/pi.svg"
 				alt="Pi"
@@ -25,7 +25,7 @@ mixin section-contacts
 						button-primary(
 						tag="div"
 						href=""
-						@click.native="feedbackShow = !feedbackShow"
+						@click="feedbackShow = !feedbackShow"
 						) Contact us
 
 				transition(name="fade")
