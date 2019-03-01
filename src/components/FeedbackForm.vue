@@ -106,6 +106,11 @@
 			//border-color: red;
 		}
 
+		&.invalid,
+		&.error {
+			border-color: red;
+		}
+
 		&:focus-visible {
 			outline: none;
 		}
