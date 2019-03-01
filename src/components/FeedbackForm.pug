@@ -27,7 +27,7 @@ mixin feedback-form()
 						option Qwestion 2
 						option Qwestion 3
 
-			.row
+			.row.nowrap
 				.col.captcha
 					div(style={
 						height: '45px',
@@ -46,10 +46,10 @@ mixin feedback-form()
 					)
 
 			.row.actions
-				.col.size-50
+				.col.size-50.action
 					button-primary Submit
 
-				.col.size-50
+				.col.size-50.action
 					button-outline.theme-invert(
 					type="reset"
 					@click.native="$emit('close')"

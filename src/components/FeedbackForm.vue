@@ -23,7 +23,11 @@
 		display: flex;
 		align-items: flex-start;
 		flex-wrap: wrap;
-		margin: -10px;
+		margin: -10px -7.5px;
+
+		&.nowrap {
+			flex-wrap: nowrap;
+		}
 
 		& + & {
 			margin-top: 10px;
@@ -34,31 +38,41 @@
 
 			.base-button {
 				width: 100%;
+
+				@media (env(--vw-md) <= width < env(--vw-xl)), (width < env(--vw-sm)) {
+					width: 230px;
+				}
 			}
 		}
 	}
 
 	.col {
-		margin: 10px;
+		padding: 10px 7.5px;
 		flex-shrink: 0;
+		max-width: 100%;
 
 		&.size-50 {
-			width: calc(50% - 20px);
+			width: 50%;
 
 			@media (env(--vw-md) <= width < env(--vw-xl)), (width < env(--vw-sm)) {
-				width: calc(100% - 20px);
+				width: 100%;
+
+				&.action {
+					width: auto;
+				}
 			}
 		}
 
 		&.size-100 {
-			width: calc(100% - 20px);
+			width: 100%;
 		}
 
 		&.captcha {
 			margin-left: auto;
 
 			&-field {
-				width: 145px;
+				flex-shrink: 1;
+				flex-grow: 1;
 			}
 		}
 	}
