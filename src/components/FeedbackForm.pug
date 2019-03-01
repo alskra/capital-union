@@ -1,0 +1,56 @@
+mixin feedback-form()
+	feedback-form(inline-template)&attributes(attributes)
+		form.feedback-form(action="")
+			.row
+				.col.size-50
+					input.field(
+					type="text"
+					name="name"
+					placeholder="Name"
+					)
+
+				.col.size-50
+					input.field(
+					type="email"
+					name="email"
+					placeholder="E-mail"
+					required
+					)
+
+			.row
+				.col.size-100
+					select.select(
+					name="qwestion"
+					)
+						option(selected) Select qwestion...
+						option Qwestion 1
+						option Qwestion 2
+						option Qwestion 3
+
+			.row
+				.col.captcha
+					div(style={
+						height: '45px',
+						display: 'flex',
+						alignItems: 'center',
+						background: 'white',
+						padding: '5px'
+					}) CAPTCHA
+
+				.col.captcha-field
+					input.field(
+					type="text"
+					name="captcha"
+					placeholder="Type characters"
+					required
+					)
+
+			.row.actions
+				.col.size-50
+					button-primary Submit
+
+				.col.size-50
+					button-outline.theme-invert(
+					type="reset"
+					@click.native="$emit('close')"
+					) Cancel

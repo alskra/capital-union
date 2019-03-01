@@ -31,8 +31,7 @@
 		background-color: var(--color-primary);
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
+			&:hover {
 				border-color: #fafafa;
 				color: #fefefe;
 				background-color: transparent;

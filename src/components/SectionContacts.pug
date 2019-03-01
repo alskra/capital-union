@@ -1,3 +1,5 @@
+include FeedbackForm
+
 mixin section-contacts
 	section-contacts(inline-template)&attributes(attributes)
 		section.section-contacts
@@ -18,11 +20,19 @@ mixin section-contacts
 						individual company websites or, alternatively, should you have a specific enquiry please contact
 						us.
 
-				.actions
-					button-primary(
-					tag="a"
-					href=""
-					) Contact us
+				transition(name="fade")
+					.actions(v-if="!feedbackShow")
+						button-primary(
+						tag="div"
+						href=""
+						@click.native="feedbackShow = !feedbackShow"
+						) Contact us
+
+				transition(name="fade")
+					.feedback(v-if="feedbackShow")
+						+feedback-form()(
+						@close="feedbackShow = !feedbackShow"
+						)
 
 			base-container
 				.info

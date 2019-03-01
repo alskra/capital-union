@@ -3,11 +3,20 @@
 
 <script>
 	import ButtonPrimary from './ButtonPrimary';
+	import ButtonOutline from './ButtonOutline';
+	import FeedbackForm from './FeedbackForm';
 
 	export default {
 		name: 'SectionContacts',
 		components: {
-			ButtonPrimary
+			ButtonPrimary,
+			ButtonOutline,
+			FeedbackForm
+		},
+		data() {
+			return {
+				feedbackShow: false
+			};
 		}
 	};
 </script>
@@ -27,9 +36,7 @@
 		position: relative;
 		padding: responsive-size(100, 50) vw(240) responsive-size(100, 30) vw(450);
 		width: vw(1190);
-		background: url("../img/contacts-bg.jpg") no-repeat 50% 50%;
-		background-size: cover;
-		background-color: #252831;
+		background: url("../img/contacts-bg.jpg") no-repeat 50% 50% / cover #252831;
 
 		@media (width < env(--vw-md)) {
 			padding: 50px 10px 30px;
@@ -63,6 +70,16 @@
 			display: flex;
 			justify-content: center;
 		}
+
+		@keyframes actions_-_fade-in {
+			0% {
+				opacity: 0;
+			}
+		}
+
+		&.fade-enter-active {
+			animation: actions_-_fade-in 0.5s;
+		}
 	}
 
 	.info {
@@ -88,6 +105,14 @@
 			&:not(:last-child) {
 				margin-bottom: 1em;
 			}
+		}
+	}
+
+	.feedback {
+		margin-top: 30px;
+
+		&.fade-enter-active {
+			animation: actions_-_fade-in 0.5s;
 		}
 	}
 </style>
