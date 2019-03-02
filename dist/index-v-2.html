@@ -4,7 +4,7 @@
 <head>
 	<title>Pi Capital Union</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
 	<base href="/">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -21,13 +21,13 @@
 			}
 			
 		</style>
-	<link href="/css/chunk-common.ebf28d0f.css" rel="preload" as="style">
+	<link href="/css/chunk-common.ca4723da.css" rel="preload" as="style">
 	<link href="/css/chunk-vendors.50b040c1.css" rel="preload" as="style">
-	<link href="/js/chunk-common.18cf27f2.js" rel="modulepreload" as="script">
+	<link href="/js/chunk-common.98bbdde3.js" rel="modulepreload" as="script">
 	<link href="/js/chunk-vendors.3418dd94.js" rel="modulepreload" as="script">
 	<link href="/js/index-v-2.8a82c564.js" rel="modulepreload" as="script">
 	<link href="/css/chunk-vendors.50b040c1.css" rel="stylesheet">
-	<link href="/css/chunk-common.ebf28d0f.css" rel="stylesheet">
+	<link href="/css/chunk-common.ca4723da.css" rel="stylesheet">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
 									</p>
 								</base-content>
 								<div class="actions">
-									<button-outline class="theme-invert" tag="a" href="">Contact us</button-outline>
+									<button-outline class="theme-invert" tag="a" href="#contacts">Contact us</button-outline>
 								</div>
 							</base-container>
 							<div class="sliding-line">
@@ -222,7 +222,7 @@
 					</service-list>
 					<section-contacts inline-template>
 						<section class="section-contacts">
-							<div class="body"><img class="logo-pi" src="img/pi.svg" alt="Pi">
+							<div class="body" id="contacts"><img class="logo-pi" src="img/pi.svg" alt="Pi">
 								<base-content>
 									<p>
 										Our joint technical expertise and strong financial and legal background also enables us to
@@ -237,9 +237,53 @@
 
 									</p>
 								</base-content>
-								<div class="actions">
-									<button-primary tag="a" href="">Contact us</button-primary>
-								</div>
+								<transition name="fade">
+									<div class="actions" v-if="!feedbackShow">
+										<button-primary tag="a" href="#feedback" @click.prevent="feedbackShow = !feedbackShow">Contact us</button-primary>
+									</div>
+								</transition>
+								<transition name="fade">
+									<div class="feedback" v-if="feedbackShow">
+										<feedback-form inline-template @close="feedbackShow = !feedbackShow">
+											<form class="feedback-form" action="">
+												<div class="row">
+													<div class="col size-50">
+														<input class="field" type="text" name="name" placeholder="Name">
+													</div>
+													<div class="col size-50">
+														<input class="field" type="email" name="email" placeholder="E-mail" required>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col size-100">
+														<select class="select" name="question">
+															<option selected>Select question...</option>
+															<option>question 1</option>
+															<option>question 2</option>
+															<option>question 3</option>
+														</select>
+													</div>
+												</div>
+												<div class="row nowrap">
+													<div class="col captcha">
+														<div style="height:45px;display:flex;alignItems:center;background:white;padding:5px;">CAPTCHA</div>
+													</div>
+													<div class="col captcha-field">
+														<input class="field" type="text" name="captcha" placeholder="Type characters" required>
+													</div>
+												</div>
+												<div class="row actions">
+													<div class="col size-50 action">
+														<button-primary>Submit</button-primary>
+													</div>
+													<div class="col size-50 action">
+														<button-outline class="theme-invert" type="reset" @click="$emit('close')">Cancel</button-outline>
+													</div>
+												</div>
+											</form>
+										</feedback-form>
+									</div>
+								</transition>
 							</div>
 							<base-container>
 								<div class="info">
@@ -266,7 +310,7 @@
 		</template>
 	</base-page>
 	<script type="module" src="/js/chunk-vendors.3418dd94.js"></script>
-	<script type="module" src="/js/chunk-common.18cf27f2.js"></script>
+	<script type="module" src="/js/chunk-common.98bbdde3.js"></script>
 	<script type="module" src="/js/index-v-2.8a82c564.js"></script>
 	<script>
 		! function() {
@@ -284,7 +328,7 @@
 
 	</script>
 	<script type="text/javascript" src="/js/chunk-vendors-legacy.d9d016eb.js" nomodule></script>
-	<script type="text/javascript" src="/js/chunk-common-legacy.68a75b92.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-common-legacy.9467070d.js" nomodule></script>
 	<script type="text/javascript" src="/js/index-v-2-legacy.8a82c564.js" nomodule></script>
 </body>
 
