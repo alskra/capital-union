@@ -30,7 +30,6 @@
 
 		&.mask {
 			mask: url("../img/pi-capital-union-mask.svg") no-repeat 50% 50% / contain;
-			//clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
 			&::before {
 				content: '';

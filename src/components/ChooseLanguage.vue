@@ -37,8 +37,10 @@
 		},
 		methods: {
 			onDocumentClick(evt) {
-				if (evt.target !== this.$refs['choose-language']
-					&& !this.$refs['choose-language'].contains(evt.target)) {
+				if (
+					evt.target !== this.$refs['choose-language'] &&
+					!this.$refs['choose-language'].contains(evt.target)
+				) {
 					this.opened = false;
 				}
 			}
