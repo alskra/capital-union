@@ -1,7 +1,7 @@
 <template lang="pug">
 	.base-button(
 	:is="tag"
-	ref="root"
+	v-on="$listeners"
 	)
 		span.icon
 			slot(name="icon")
@@ -18,9 +18,6 @@
 				type: String,
 				default: 'button'
 			}
-		},
-		mounted() {
-			alert(this.$refs.root.outerHTML);
 		}
 	}
 </script>
