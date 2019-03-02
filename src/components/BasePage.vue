@@ -24,6 +24,6 @@
 		min-width: env(--vw-xs);
 		min-height: 100vh;
 		overflow: hidden;
-		background-color: var(--base-page_-_background-color);
+		background-color: transparent;
 	}
 </style>

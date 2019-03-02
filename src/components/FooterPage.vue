@@ -13,6 +13,8 @@
 <style lang="scss" scoped>
 	.footer-page {
 		@include reset;
+
+		background-color: var(--base-page_-_background-color);
 	}
 
 	.capital-union {
@@ -25,7 +27,7 @@
 
 		&.mask {
 			mask: url("../img/pi-capital-union-mask.svg") no-repeat 50% 50% / contain;
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			//clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
 			&::before {
 				content: '';
