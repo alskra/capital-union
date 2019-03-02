@@ -5,7 +5,12 @@
 	export default {
 		name: 'FooterPage',
 		mounted() {
-			document.documentElement.style.WebkitMaskClip !== undefined ? this.$refs.mask.classList.add('mask') : null;
+			if (
+				!(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) &&
+				document.documentElement.style.WebkitMaskClip !== undefined
+			) {
+				this.$refs.mask.classList.add('mask');
+			}
 		}
 	};
 </script>
@@ -13,8 +18,6 @@
 <style lang="scss" scoped>
 	.footer-page {
 		@include reset;
-
-		background-color: var(--base-page_-_background-color);
 	}
 
 	.capital-union {
