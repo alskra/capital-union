@@ -52,5 +52,5 @@ mixin feedback-form()
 				.col.size-50.action
 					button-outline.theme-invert(
 					type="reset"
-					@click="$emit('close')"
+					@click.native="$emit('close')"
 					) Cancel

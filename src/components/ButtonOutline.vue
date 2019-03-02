@@ -1,7 +1,6 @@
 <template lang="pug">
 	base-button.button-outline(
 	:tag="tag"
-	v-on="$listeners"
 	)
 		template(v-slot:icon)
 			slot(name="icon")
