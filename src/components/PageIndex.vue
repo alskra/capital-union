@@ -29,8 +29,22 @@
 		},
 		methods: {
 			afterLoad() {
-				window.dispatchEvent(new Event('scroll'));
+				// window.dispatchEvent(new Event('scroll'));
+			},
+			reBuild() {
+				this.$refs.fullpage.api.reBuild();
 			}
+		},
+		mounted() {
+			document.addEventListener('click', () => {
+				requestAnimationFrame(this.reBuild);
+			});
+
+			requestAnimationFrame(function updateScroll() {
+				window.dispatchEvent(new Event('scroll'));
+
+				requestAnimationFrame(updateScroll);
+			})
 		}
 	};
 </script>

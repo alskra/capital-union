@@ -5,6 +5,7 @@
 	import ButtonPrimary from './ButtonPrimary';
 	import ButtonOutline from './ButtonOutline';
 	import FeedbackForm from './FeedbackForm';
+	import PageIndex from './PageIndex';
 
 	export default {
 		name: 'SectionContacts',
@@ -17,6 +18,11 @@
 			return {
 				feedbackShow: false
 			};
+		},
+		methods: {
+			actionsAfterEnter() {
+				//PageIndex.methods.reBuild();
+			}
 		}
 	};
 </script>
