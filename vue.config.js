@@ -1,5 +1,6 @@
 const path = require('path');
 const pugBem = require('pug-bem');
+const webpack = require('webpack');
 
 process.env.VUE_APP_TITLE = 'Pi Capital Union';
 
@@ -73,5 +74,12 @@ module.exports = {
 		hot: false,
 		hotOnly: false
 	},
-	transpileDependencies: ['focus-within']
+	transpileDependencies: ['focus-within'],
+	configureWebpack: {
+		plugins: [
+			new webpack.ProvidePlugin({
+				IScroll: 'fullpage.js/vendors/scrolloverflow'
+			})
+		]
+	}
 };
