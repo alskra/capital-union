@@ -87,7 +87,7 @@
 		@include reset;
 
 		margin-left: auto;
-		padding: responsive-size(100, 30) 0 responsive-size(100, 30) percentage(1 / 12);
+		padding: responsive-size(70, 30) 0 responsive-size(70, 30) percentage(1 / 12);
 		width: 50%;
 		color: #0a0a0a;
 		font-weight: var(--base-content-headings_-_font-weight);
