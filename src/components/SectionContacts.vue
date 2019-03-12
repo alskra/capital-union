@@ -18,11 +18,6 @@
 			return {
 				feedbackShow: false
 			};
-		},
-		methods: {
-			actionsAfterEnter() {
-				//PageIndex.methods.reBuild();
-			}
 		}
 	};
 </script>
@@ -31,10 +26,10 @@
 	.section-contacts {
 		@include reset;
 
-		padding-top: responsive-size(188, 80);
+		padding-top: responsive-size(188 + 70, 80 + 30);
 
 		@media (width < env(--vw-md)) {
-			padding-top: 80px;
+			padding-top: 80px + 30px;
 		}
 	}
 

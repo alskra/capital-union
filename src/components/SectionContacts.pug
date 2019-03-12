@@ -20,10 +20,7 @@ mixin section-contacts
 						individual company websites or, alternatively, should you have a specific enquiry please contact
 						us.
 
-				transition(
-				name="fade"
-				@after-enter="actionsAfterEnter"
-				)
+				transition(name="fade")
 					.actions(
 					v-if="!feedbackShow"
 					key="actions"
