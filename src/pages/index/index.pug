@@ -12,20 +12,26 @@ block favicon
 block app
 	base-page.page-index
 		template
-			+header-page.theme-light
+			full-page(
+			id="fullpage"
+			ref="fullpage"
+			:options="fullpageOptions"
+			)
+				.section(data-anchor="start")
+					+header-page.theme-light
 
-			main.main
-				article
-					+intro-page
+					block intro-page
+						+intro-page
 
-					service-list
+				.section(data-anchor="ex-pi")
+					service-box
 						+service-item({
 							title: 'Making transactions secure & confidential again',
 							description: 'Virtual currency processing platform',
 							content: `<p>Our crypto payment platform EX Pi is a licensed international service that
-allow its clients to buy and sell cryptocurrencies, and make financial transactions using our stablecoins, secured from
-the volatility of cryptocurrencies. The exchange and all transactions are carried out using our own software platform,
-built on the basis of classical banking technologies.</p>`,
+						allow its clients to buy and sell cryptocurrencies, and make financial transactions using our stablecoins, secured from
+						the volatility of cryptocurrencies. The exchange and all transactions are carried out using our own software platform,
+						built on the basis of classical banking technologies.</p>`,
 							imgSrc: `upload/ex-pi.jpg`,
 							url: `www.expi.trade`,
 							logoIcon: `icon-ex-pi`,
@@ -33,29 +39,33 @@ built on the basis of classical banking technologies.</p>`,
 							mapSrc: `img/europe-estonia.svg`
 						}).ex-pi
 
+				.section(data-anchor="crypto-pi")
+					service-box
 						+service-item({
 							title: `Disrupting the private
 							investments market`,
 							description: `Blockchain powered investment  platform`,
 							content: `<p>Crypto Pi is a digital investment platform that enables its clients to invest
-in a new class of advanced asset management instruments – investment tokens. Using blockchain technology Crypto Pi opens
-access to high class capital management services that were previously available only for limited category of investors.
-Professional asset management is now for everyone</p>`,
+						in a new class of advanced asset management instruments – investment tokens. Using blockchain technology Crypto Pi opens
+						access to high class capital management services that were previously available only for limited category of investors.
+						Professional asset management is now for everyone</p>`,
 							imgSrc: `upload/crypto-pi.jpg`,
 							url: `www.cryptopi.fund`,
 							logoIcon: `icon-crypto-pi`,
 							mapLabel: `Singapore`,
 							mapSrc: `img/singapore.svg`
-						}).crypto-pi
+						}).crypto-pi.even
 
+				.section(data-anchor="capital-pi")
+					service-box
 						+service-item({
 							title: `Securing capitals in comfort
 							and confidence`,
 							description: `Alternative investment fund`,
 							content: `<p>Capital Pi is an alternative investment fund, approved in Amsterdam,
-Netherlands. The investment activity of the fund is ideal for clients and partners with a high level of equity, who are
-looking for a secure fund registered in one of the most investor friendly jurisdiction of EU, and seek not only
-to protect investment capital, but also to generate an above average return.</p>`,
+						Netherlands. The investment activity of the fund is ideal for clients and partners with a high level of equity, who are
+						looking for a secure fund registered in one of the most investor friendly jurisdiction of EU, and seek not only
+						to protect investment capital, but also to generate an above average return.</p>`,
 							imgSrc: `upload/capital-pi.jpg`,
 							url: `www.capitalpi.fund`,
 							logoIcon: `icon-capital-pi`,
@@ -63,6 +73,8 @@ to protect investment capital, but also to generate an above average return.</p>
 							mapSrc: `img/europe-netherlands.svg`
 						}).capital-pi
 
-					+section-contacts
+				.section(data-anchor="contacts")
+					+section-contacts()
 
-			+footer-page()
+				.section.end(data-anchor="end")
+					+footer-page()

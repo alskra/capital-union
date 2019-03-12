@@ -12,30 +12,31 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
-    "css-vars-ponyfill": "^1.16.4",
+    "css-vars-ponyfill": "^1.17.2",
     "focus-visible": "^4.1.5",
     "focus-within": "^3.0.2",
     "inputmask": "^4.0.6",
     "normalize.css": "^8.0.1",
-    "vue": "^2.6.7"
+    "vue": "^2.6.8",
+    "vue-fullpage.js": "^0.1.2"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^4.0.0",
-    "@vue/cli-plugin-babel": "^3.4.1",
-    "@vue/cli-plugin-eslint": "^3.4.1",
-    "@vue/cli-service": "^3.4.1",
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
     "babel-eslint": "^10.0.1",
     "css-mqpacker": "^7.0.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "eslint-plugin-vue": "^5.2.2",
     "imagemin": "^6.1.0",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
-    "js-beautify": "^1.8.9",
+    "js-beautify": "^1.9.0",
     "postcss-functions": "^3.0.0",
-    "postcss-preset-env": "^6.5.0",
+    "postcss-preset-env": "^6.6.0",
     "postcss-pxtorem": "^4.0.1",
     "postcss-scss": "^2.0.0",
     "pug": "^2.0.3",
@@ -44,7 +45,7 @@
     "pug-loader": "^2.4.0",
     "sort-css-media-queries": "^1.4.3",
     "style-resources-loader": "^1.2.1",
-    "vue-template-compiler": "^2.6.7"
+    "vue-template-compiler": "^2.6.8"
   },
   "eslintConfig": {
     "root": true,

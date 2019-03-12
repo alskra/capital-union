@@ -18,6 +18,8 @@
 <style lang="scss" scoped>
 	.footer-page {
 		@include reset;
+
+		padding-top: responsive-size(70, 30);
 	}
 
 	.capital-union {
@@ -29,25 +31,15 @@
 		}
 
 		&.mask {
+			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / cover;
 			mask: url("../img/pi-capital-union-mask.svg") no-repeat 50% 50% / contain;
-
-			&::before {
-				content: '';
-				position: fixed;
-				z-index: -1;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				background: url("../img/footer-bg.jpg") no-repeat 50% 50% / cover;
-			}
 		}
 	}
 
 	.info {
 		@include reset;
 
-		padding: responsive-size(100, 30) 0;
+		padding: responsive-size(70, 30) 0;
 		color: #908d8d;
 		font-family: var(--base-content_-_font-family);
 		font-size: responsive-size(rem(18), rem(16));

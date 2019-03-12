@@ -51,7 +51,8 @@
 			max-width: none;
 		}
 
-		&:nth-child(even) {
+		&:nth-child(even),
+		&.even {
 			@media (width >= env(--vw-md)) {
 				margin-right: 0;
 				margin-left: responsive-size(130, 0);

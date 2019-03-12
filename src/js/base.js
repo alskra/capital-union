@@ -7,7 +7,11 @@ import cssVars from 'css-vars-ponyfill';
 import 'focus-visible';
 import focusWithin from 'focus-within';
 
+// Vue
 import Vue from 'vue';
+import 'fullpage.js/dist/fullpage.min.css';
+import 'fullpage.js/vendors/scrolloverflow';
+import VueFullPage from 'vue-fullpage.js';
 
 cssVars();
 
@@ -18,6 +22,7 @@ focusWithin(document, {
 });
 
 Vue.config.productionTip = false;
+Vue.use(VueFullPage);
 
 // Import base components
 const requireComponent = require.context('../components', true, /Base[A-Z]\w+\.(vue|js)$/);
@@ -69,8 +74,8 @@ const loadOnScroll = (evt, el, binding) => {
 			el.classList.add('animated', binding.value);
 		});
 
-		el.setAttribute('src', el.dataset.src);
-		el.setAttribute('srcset', el.dataset.srcset);
+		el.setAttribute('src', el.lazySrc);
+		el.setAttribute('srcset', el.lazySrcset);
 
 		return true;
 	}
@@ -87,8 +92,8 @@ Vue.directive('scroll', {
 			el.style.opacity = '0';
 			el.style.visibility = 'hidden';
 
-			el.dataset.src = el.getAttribute('src');
-			el.dataset.srcset = el.getAttribute('srcset');
+			el.lazySrc = el.getAttribute('src');
+			el.lazySrcset = el.getAttribute('srcset');
 
 			el.setAttribute('src', '');
 			el.setAttribute('srcset', '');
