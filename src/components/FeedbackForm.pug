@@ -17,15 +17,23 @@ mixin feedback-form()
 					required
 					)
 
+			//-
+				.row
+					.col.size-100
+						select.select(
+						name="question"
+						)
+							option(selected) Select question...
+							option question 1
+							option question 2
+							option question 3
+
 			.row
 				.col.size-100
-					select.select(
+					textarea.textarea(
 					name="question"
+					placeholder="Your question"
 					)
-						option(selected) Select question...
-						option question 1
-						option question 2
-						option question 3
 
 			.row.nowrap
 				.col.captcha
