@@ -17,58 +17,58 @@
 	<meta name="theme-color" content="#eaeaea">
 	<style>
 		[inline-template] {
-				display: none;
-			}
-			
-		</style>
-	<link href="/css/chunk-common.ca4723da.css" rel="preload" as="style">
-	<link href="/css/chunk-vendors.50b040c1.css" rel="preload" as="style">
-	<link href="/js/chunk-common.98bbdde3.js" rel="modulepreload" as="script">
-	<link href="/js/chunk-vendors.3418dd94.js" rel="modulepreload" as="script">
-	<link href="/js/index.988d8a93.js" rel="modulepreload" as="script">
-	<link href="/css/chunk-vendors.50b040c1.css" rel="stylesheet">
-	<link href="/css/chunk-common.ca4723da.css" rel="stylesheet">
+			display: none;
+		}
+
+	</style>
+	<link href="/css/chunk-common.7395a9ad.css" rel="preload" as="style">
+	<link href="/css/chunk-vendors.47d7ada2.css" rel="preload" as="style">
+	<link href="/js/chunk-common.8cd2b2c3.js" rel="modulepreload" as="script">
+	<link href="/js/chunk-vendors.66d063ef.js" rel="modulepreload" as="script">
+	<link href="/js/index.0fa680e7.js" rel="modulepreload" as="script">
+	<link href="/css/chunk-vendors.47d7ada2.css" rel="stylesheet">
+	<link href="/css/chunk-common.7395a9ad.css" rel="stylesheet">
 </head>
 
 <body>
 	<noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
 	<base-page class="page-index">
 		<template>
-			<header-page class="theme-light" inline-template>
-				<header class="header-page">
-					<base-container><a class="logo" href="/" title="Pi Capital Union">
-							<icon-pi-capital-union class="logo-img"></icon-pi-capital-union>
-						</a>
-						<choose-language class="theme-header right" inline-template :language="{code: 'en-UK', label: 'EN'}">
-							<div class="choose-language" ref="choose-language">
-								<button class="button" type="button" @click="opened = !opened"><span class="button-label">Choose a language:</span><span class="button-icon">
-										<component :is="'icon-lang-' + language.code.toLowerCase()"></component>
-									</span><span class="button-label">{{ language.label }}</span></button>
-								<transition name="scaleY-fade">
-									<div class="dropdown" v-if="opened"><a class="dropdown-item" href="/" v-if="language.code !== 'en-UK'"><span class="dropdown-item-icon">
-												<component is="icon-lang-en-uk"></component>
-											</span><span class="dropdown-item-label">EN</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'it'"><span class="dropdown-item-icon">
-												<component is="icon-lang-it"></component>
-											</span><span class="dropdown-item-label">IT</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'sr'"><span class="dropdown-item-icon">
-												<component is="icon-lang-sr"></component>
-											</span><span class="dropdown-item-label">SR</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'zh'"><span class="dropdown-item-icon">
-												<component is="icon-lang-zh"></component>
-											</span><span class="dropdown-item-label">ZH</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'ko'"><span class="dropdown-item-icon">
-												<component is="icon-lang-ko"></component>
-											</span><span class="dropdown-item-label">KO</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'ru'"><span class="dropdown-item-icon">
-												<component is="icon-lang-ru"></component>
-											</span><span class="dropdown-item-label">RU</span></a>
+			<full-page id="fullpage" ref="fullpage" :options="fullpageOptions">
+				<div class="section" data-anchor="start">
+					<header-page class="theme-light" inline-template>
+						<header class="header-page">
+							<base-container><a class="logo" href="/" title="Pi Capital Union">
+									<icon-pi-capital-union class="logo-img"></icon-pi-capital-union>
+								</a>
+								<choose-language class="theme-header right" inline-template :language="{code: 'en-UK', label: 'EN'}">
+									<div class="choose-language" ref="choose-language">
+										<button class="button" type="button" @click="opened = !opened"><span class="button-label">Choose a language:</span><span class="button-icon">
+												<component :is="'icon-lang-' + language.code.toLowerCase()"></component>
+											</span><span class="button-label">{{ language.label }}</span></button>
+										<transition name="scaleY-fade">
+											<div class="dropdown" v-if="opened"><a class="dropdown-item" href="/" v-if="language.code !== 'en-UK'"><span class="dropdown-item-icon">
+														<component is="icon-lang-en-uk"></component>
+													</span><span class="dropdown-item-label">EN</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'it'"><span class="dropdown-item-icon">
+														<component is="icon-lang-it"></component>
+													</span><span class="dropdown-item-label">IT</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'sr'"><span class="dropdown-item-icon">
+														<component is="icon-lang-sr"></component>
+													</span><span class="dropdown-item-label">SR</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'zh'"><span class="dropdown-item-icon">
+														<component is="icon-lang-zh"></component>
+													</span><span class="dropdown-item-label">ZH</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'ko'"><span class="dropdown-item-icon">
+														<component is="icon-lang-ko"></component>
+													</span><span class="dropdown-item-label">KO</span></a><a class="dropdown-item" href="/" v-if="language.code !== 'ru'"><span class="dropdown-item-icon">
+														<component is="icon-lang-ru"></component>
+													</span><span class="dropdown-item-label">RU</span></a>
+											</div>
+										</transition>
 									</div>
-								</transition>
-							</div>
-						</choose-language>
-					</base-container>
-				</header>
-			</header-page>
-			<main class="main">
-				<article>
+								</choose-language>
+							</base-container>
+						</header>
+					</header-page>
 					<intro-page inline-template>
-						<div class="intro-page">
+						<section class="intro-page">
 							<div class="bg-1" v-scroll="handleScroll"></div>
 							<div class="bg-2" v-scroll="handleScroll"></div>
 							<div class="bg-3" v-scroll="handleScroll"></div>
@@ -92,9 +92,11 @@
 							<div class="sliding-line">
 								<div class="sliding-line-inner" v-scroll="handleScroll"></div>
 							</div>
-						</div>
+						</section>
 					</intro-page>
-					<service-list>
+				</div>
+				<div class="section" data-anchor="ex-pi">
+					<service-box>
 						<service-item class="ex-pi" inline-template>
 							<section class="service-item">
 								<div class="col-main">
@@ -136,7 +138,11 @@
 								</aside>
 							</section>
 						</service-item>
-						<service-item class="crypto-pi" inline-template>
+					</service-box>
+				</div>
+				<div class="section" data-anchor="crypto-pi">
+					<service-box>
+						<service-item class="crypto-pi even" inline-template>
 							<section class="service-item">
 								<div class="col-main">
 									<header class="header">
@@ -178,6 +184,10 @@
 								</aside>
 							</section>
 						</service-item>
+					</service-box>
+				</div>
+				<div class="section" data-anchor="capital-pi">
+					<service-box>
 						<service-item class="capital-pi" inline-template>
 							<section class="service-item">
 								<div class="col-main">
@@ -220,10 +230,12 @@
 								</aside>
 							</section>
 						</service-item>
-					</service-list>
+					</service-box>
+				</div>
+				<div class="section" data-anchor="contacts">
 					<section-contacts inline-template>
 						<section class="section-contacts">
-							<div class="body" id="contacts"><img class="logo-pi" src="img/pi.svg" alt="Pi">
+							<div class="body"><img class="logo-pi" src="img/pi.svg" alt="Pi">
 								<base-content>
 									<p>
 										Our joint technical expertise and strong financial and legal background also enables us to
@@ -239,12 +251,10 @@
 									</p>
 								</base-content>
 								<transition name="fade">
-									<div class="actions" v-if="!feedbackShow">
+									<div class="actions" v-if="!feedbackShow" key="actions">
 										<button-primary tag="a" href="#feedback" @click.prevent="feedbackShow = !feedbackShow">Contact us</button-primary>
 									</div>
-								</transition>
-								<transition name="fade">
-									<div class="feedback" v-if="feedbackShow">
+									<div class="feedback" v-else key="feedback">
 										<feedback-form inline-template @close="feedbackShow = !feedbackShow">
 											<form class="feedback-form" action="">
 												<div class="row">
@@ -257,12 +267,7 @@
 												</div>
 												<div class="row">
 													<div class="col size-100">
-														<select class="select" name="question">
-															<option selected>Select question...</option>
-															<option>question 1</option>
-															<option>question 2</option>
-															<option>question 3</option>
-														</select>
+														<textarea class="textarea" name="question" placeholder="Your question"></textarea>
 													</div>
 												</div>
 												<div class="row nowrap">
@@ -296,23 +301,25 @@
 							</base-container>
 						</section>
 					</section-contacts>
-				</article>
-			</main>
-			<footer-page inline-template>
-				<footer class="footer-page">
-					<div class="capital-union" ref="mask"></div>
-					<base-container>
-						<div class="info">
-							<p>© COPYRIGHT 2019</p>
-						</div>
-					</base-container>
-				</footer>
-			</footer-page>
+				</div>
+				<div class="section" data-anchor="end">
+					<footer-page inline-template>
+						<footer class="footer-page">
+							<div class="capital-union" ref="mask"></div>
+							<base-container>
+								<div class="info">
+									<p>© COPYRIGHT 2019</p>
+								</div>
+							</base-container>
+						</footer>
+					</footer-page>
+				</div>
+			</full-page>
 		</template>
 	</base-page>
-	<script type="module" src="/js/chunk-vendors.3418dd94.js"></script>
-	<script type="module" src="/js/chunk-common.98bbdde3.js"></script>
-	<script type="module" src="/js/index.988d8a93.js"></script>
+	<script type="module" src="/js/chunk-vendors.66d063ef.js"></script>
+	<script type="module" src="/js/chunk-common.8cd2b2c3.js"></script>
+	<script type="module" src="/js/index.0fa680e7.js"></script>
 	<script>
 		! function() {
 			var e = document,
@@ -328,9 +335,9 @@
 		}();
 
 	</script>
-	<script type="text/javascript" src="/js/chunk-vendors-legacy.d9d016eb.js" nomodule></script>
-	<script type="text/javascript" src="/js/chunk-common-legacy.9467070d.js" nomodule></script>
-	<script type="text/javascript" src="/js/index-legacy.988d8a93.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-vendors-legacy.ef139dc9.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-common-legacy.902bd3b0.js" nomodule></script>
+	<script type="text/javascript" src="/js/index-legacy.0fa680e7.js" nomodule></script>
 </body>
 
 </html>
