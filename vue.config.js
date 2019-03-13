@@ -78,7 +78,7 @@ module.exports = {
 	configureWebpack: {
 		plugins: [
 			new webpack.ProvidePlugin({
-				IScroll: 'fullpage.js/vendors/scrolloverflow'
+				//IScroll: path.join(__dirname, 'src/js/fullpage.js/vendors/scrolloverflow')
 			})
 		]
 	}
