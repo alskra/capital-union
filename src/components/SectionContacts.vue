@@ -72,7 +72,7 @@
 		}
 
 		&.fade-enter-active {
-			animation: actions_-_fade-in 1s;
+			animation: actions_-_fade-in 0.5s;
 		}
 
 		@keyframes actions_-_fade-in {
@@ -112,7 +112,18 @@
 		margin-top: 30px;
 
 		&.fade-enter-active {
-			animation: actions_-_fade-in 1s;
+			animation: feedback_-_fade-in 0.8s;
+		}
+
+		@keyframes feedback_-_fade-in {
+			0% {
+				opacity: 0;
+				max-height: 0;
+			}
+
+			100% {
+				max-height: 1000px;
+			}
 		}
 	}
 </style>

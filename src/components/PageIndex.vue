@@ -36,6 +36,7 @@
 			}
 		},
 		mounted() {
+			const vm = this;
 			const event = document.createEvent('Event');
 
 			event.initEvent('scroll', true, true);
@@ -46,8 +47,16 @@
 				requestAnimationFrame(updateScroll);
 			});
 
+			setTimeout(function reBuild() {
+				vm.reBuild();
+
+				setTimeout(reBuild, 500);
+			}, 500);
+
 			document.addEventListener('click', () => {
-				requestAnimationFrame(this.reBuild);
+				// requestAnimationFrame(this.reBuild);
+				//
+				// setTimeout(() => this.reBuild(), 1000);
 			});
 		}
 	};
