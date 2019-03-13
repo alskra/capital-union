@@ -68,7 +68,7 @@ module.exports = {
 				});
 		});
 	},
-	productionSourceMap: false,
+	productionSourceMap: true,
 	css: {sourceMap: process.env.NODE_ENV !== 'production'},
 	devServer: {
 		hot: false,
