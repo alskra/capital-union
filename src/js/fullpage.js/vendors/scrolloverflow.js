@@ -267,7 +267,7 @@ var utils = (function () {
             // initMouseEvent is deprecated.
             ev = document.createEvent(window.MouseEvent ? 'MouseEvents' : 'Event');
             ev.initEvent('click', true, true);
-            ev.view = e.view || window;
+            // ev.view = e.view || window;
             ev.detail = 1;
             ev.screenX = target.screenX || 0;
             ev.screenY = target.screenY || 0;
