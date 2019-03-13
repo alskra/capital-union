@@ -5,10 +5,7 @@
 	export default {
 		name: 'FooterPage',
 		mounted() {
-			if (
-				!(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) &&
-				document.documentElement.style.WebkitMaskClip !== undefined
-			) {
+			if (document.documentElement.style.WebkitMaskSize !== undefined) {
 				this.$refs.mask.classList.add('mask');
 			}
 		}

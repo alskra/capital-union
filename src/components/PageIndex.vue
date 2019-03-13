@@ -23,7 +23,7 @@
 				fullpageOptions: {
 					licenseKey: '00000000-00000000-00000000-00000000',
 					scrollOverflow: true,
-					afterLoad: this.afterLoad
+					// afterLoad: this.afterLoad
 				}
 			};
 		},
@@ -36,23 +36,22 @@
 			}
 		},
 		mounted() {
+			const event = document.createEvent('Event');
+
+			event.initEvent('scroll', true, true);
+
+			requestAnimationFrame(function updateScroll() {
+				window.dispatchEvent(event);
+
+				requestAnimationFrame(updateScroll);
+			});
+
 			document.addEventListener('click', () => {
 				requestAnimationFrame(this.reBuild);
 			});
-
-			requestAnimationFrame(function updateScroll() {
-				window.dispatchEvent(new Event('scroll'));
-
-				requestAnimationFrame(updateScroll);
-			})
 		}
 	};
 </script>
 
 <style lang="scss" scoped>
-	.section {
-		&.end {
-			background: url("../img/footer-bg.jpg") no-repeat 50% 50% / cover fixed;
-		}
-	}
 </style>
