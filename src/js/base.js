@@ -10,7 +10,7 @@ import focusWithin from 'focus-within';
 // Vue
 import Vue from 'vue';
 import 'fullpage.js/dist/fullpage.min.css';
-import './scrolloverflow';
+import 'fullpage.js/vendors/scrolloverflow';
 import VueFullPage from 'vue-fullpage.js';
 
 cssVars();

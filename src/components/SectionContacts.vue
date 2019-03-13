@@ -71,14 +71,14 @@
 			justify-content: center;
 		}
 
+		&.fade-enter-active {
+			animation: actions_-_fade-in 1s;
+		}
+
 		@keyframes actions_-_fade-in {
 			0% {
 				opacity: 0;
 			}
-		}
-
-		&.fade-enter-active {
-			animation: actions_-_fade-in 0.5s;
 		}
 	}
 
@@ -112,7 +112,7 @@
 		margin-top: 30px;
 
 		&.fade-enter-active {
-			animation: actions_-_fade-in 0.5s;
+			animation: actions_-_fade-in 1s;
 		}
 	}
 </style>
