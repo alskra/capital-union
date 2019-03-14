@@ -9,6 +9,11 @@
 		components: {
 			ButtonOutline
 		},
+		data() {
+			return {
+				location: location
+			};
+		},
 		methods: {
 			handleScroll(evt, el) {
 				const clientRect = el.parentElement.getBoundingClientRect();
@@ -47,6 +52,7 @@
 			position: relative;
 			padding-left: responsive-size(70, 30);
 			max-width: 800px;
+			transform: translate3d(0, 0, 0);
 		}
 
 		.base-content {

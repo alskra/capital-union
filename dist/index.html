@@ -21,13 +21,13 @@
 		}
 
 	</style>
-	<link href="/css/chunk-common.7395a9ad.css" rel="preload" as="style">
-	<link href="/css/chunk-vendors.47d7ada2.css" rel="preload" as="style">
-	<link href="/js/chunk-common.8cd2b2c3.js" rel="modulepreload" as="script">
-	<link href="/js/chunk-vendors.66d063ef.js" rel="modulepreload" as="script">
+	<link href="/css/chunk-common.56dba890.css" rel="preload" as="style">
+	<link href="/css/chunk-vendors.15df8765.css" rel="preload" as="style">
+	<link href="/js/chunk-common.9f303abd.js" rel="modulepreload" as="script">
+	<link href="/js/chunk-vendors.35a8683a.js" rel="modulepreload" as="script">
 	<link href="/js/index.0fa680e7.js" rel="modulepreload" as="script">
-	<link href="/css/chunk-vendors.47d7ada2.css" rel="stylesheet">
-	<link href="/css/chunk-common.7395a9ad.css" rel="stylesheet">
+	<link href="/css/chunk-vendors.15df8765.css" rel="stylesheet">
+	<link href="/css/chunk-common.56dba890.css" rel="stylesheet">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
 									</p>
 								</base-content>
 								<div class="actions">
-									<button-outline class="theme-invert" tag="a" href="#contacts">Contact us</button-outline>
+									<button-outline class="theme-invert" tag="a" href="#contacts" @click="$store.commit('toggleFeedbackFormShow', true)">Contact us</button-outline>
 								</div>
 							</base-container>
 							<div class="sliding-line">
@@ -250,12 +250,14 @@
 
 									</p>
 								</base-content>
-								<transition name="fade">
-									<div class="actions" v-if="!feedbackShow" key="actions">
-										<button-primary tag="a" href="#feedback" @click.prevent="feedbackShow = !feedbackShow">Contact us</button-primary>
+								<transition name="slide" mode="out-in" @enter="feedbackEnter" @after-enter="feedbackAfterEnter" @leave="feedbackLeave" @after-leave="feedbackAfterLeave">
+									<div class="feedback" v-if="!$store.state.feedbackFormShow" key="actions">
+										<div class="actions">
+											<button-primary tag="a" href="#feedback" @click.prevent="$store.commit('toggleFeedbackFormShow')">Contact us</button-primary>
+										</div>
 									</div>
-									<div class="feedback" v-else key="feedback">
-										<feedback-form inline-template @close="feedbackShow = !feedbackShow">
+									<div class="feedback" v-else key="feedback-form">
+										<feedback-form inline-template @close="$store.commit('toggleFeedbackFormShow')">
 											<form class="feedback-form" action="">
 												<div class="row">
 													<div class="col size-50">
@@ -317,8 +319,8 @@
 			</full-page>
 		</template>
 	</base-page>
-	<script type="module" src="/js/chunk-vendors.66d063ef.js"></script>
-	<script type="module" src="/js/chunk-common.8cd2b2c3.js"></script>
+	<script type="module" src="/js/chunk-vendors.35a8683a.js"></script>
+	<script type="module" src="/js/chunk-common.9f303abd.js"></script>
 	<script type="module" src="/js/index.0fa680e7.js"></script>
 	<script>
 		! function() {
@@ -335,8 +337,8 @@
 		}();
 
 	</script>
-	<script type="text/javascript" src="/js/chunk-vendors-legacy.ef139dc9.js" nomodule></script>
-	<script type="text/javascript" src="/js/chunk-common-legacy.902bd3b0.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-vendors-legacy.01d89678.js" nomodule></script>
+	<script type="text/javascript" src="/js/chunk-common-legacy.d17dc12d.js" nomodule></script>
 	<script type="text/javascript" src="/js/index-legacy.0fa680e7.js" nomodule></script>
 </body>
 
