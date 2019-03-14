@@ -35,7 +35,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		min-width: env(--vw-xs);
+		transform: translate3d(0, 0, 0);
 
 		.base-container {
 			display: flex;
