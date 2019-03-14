@@ -27,6 +27,7 @@ mixin intro-page({variant} = {})
 					button-outline.theme-invert(
 					tag="a"
 					href="#contacts"
+					@click="$store.commit('toggleFeedbackFormShow', true)"
 					) Contact us
 
 			.sliding-line

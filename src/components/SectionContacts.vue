@@ -17,6 +17,21 @@
 			return {
 				feedbackShow: false
 			};
+		},
+		methods: {
+			feedbackEnter(el) {
+				el.style.height = el.scrollHeight + 'px';
+			},
+			feedbackAfterEnter(el) {
+				el.style.height = '';
+				this.$store.state.fullpageApi.reBuild();
+			},
+			feedbackLeave(el) {
+				this.feedbackEnter(el);
+			},
+			feedbackAfterLeave(el) {
+				this.feedbackAfterEnter(el);
+			}
 		}
 	};
 </script>
@@ -29,6 +44,10 @@
 
 		@media (width < env(--vw-md)) {
 			padding-top: 80px + 30px;
+		}
+
+		.feedback-form {
+			margin-top: 30px;
 		}
 	}
 
@@ -65,20 +84,29 @@
 		}
 	}
 
+	.feedback {
+		overflow: hidden;
+
+		&.slide-enter-active {
+			animation: feedback_-_slide-in 0.3s linear;
+		}
+
+		&.slide-leave-active {
+			animation: feedback_-_slide-in 0.3s linear reverse;
+		}
+
+		@keyframes feedback_-_slide-in {
+			0% {
+				opacity: 0;
+				height: 0;
+			}
+		}
+	}
+
 	.actions {
 		@media (width < env(--vw-md)) {
 			display: flex;
 			justify-content: center;
-		}
-
-		&.fade-enter-active {
-			animation: actions_-_fade-in 0.5s;
-		}
-
-		@keyframes actions_-_fade-in {
-			0% {
-				opacity: 0;
-			}
 		}
 	}
 
@@ -104,25 +132,6 @@
 
 			&:not(:last-child) {
 				margin-bottom: 1em;
-			}
-		}
-	}
-
-	.feedback {
-		margin-top: 30px;
-
-		&.fade-enter-active {
-			animation: feedback_-_fade-in 0.8s;
-		}
-
-		@keyframes feedback_-_fade-in {
-			0% {
-				opacity: 0;
-				max-height: 0;
-			}
-
-			100% {
-				max-height: 1000px;
 			}
 		}
 	}

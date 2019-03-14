@@ -20,23 +20,31 @@ mixin section-contacts
 						individual company websites or, alternatively, should you have a specific enquiry please contact
 						us.
 
-				transition(name="fade")
-					.actions(
-					v-if="!feedbackShow"
+				transition(
+				name="slide"
+				mode="out-in"
+				@enter="feedbackEnter"
+				@after-enter="feedbackAfterEnter"
+				@leave="feedbackLeave"
+				@after-leave="feedbackAfterLeave"
+				)
+					.feedback(
+					v-if="!$store.state.feedbackFormShow"
 					key="actions"
 					)
-						button-primary(
-						tag="a"
-						href="#feedback"
-						@click.prevent="feedbackShow = !feedbackShow"
-						) Contact us
+						.actions
+							button-primary(
+							tag="a"
+							href="#feedback"
+							@click.prevent="$store.commit('toggleFeedbackFormShow')"
+							) Contact us
 
 					.feedback(
 					v-else
-					key="feedback"
+					key="feedback-form"
 					)
 						+feedback-form()(
-						@close="feedbackShow = !feedbackShow"
+						@close="$store.commit('toggleFeedbackFormShow')"
 						)
 
 			base-container

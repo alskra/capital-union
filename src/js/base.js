@@ -9,9 +9,6 @@ import focusWithin from 'focus-within';
 
 // Vue
 import Vue from 'vue';
-import 'fullpage.js/dist/fullpage.min.css';
-import './fullpage.js/vendors/scrolloverflow';
-import VueFullPage from 'vue-fullpage.js';
 
 cssVars();
 
@@ -22,7 +19,6 @@ focusWithin(document, {
 });
 
 Vue.config.productionTip = false;
-Vue.use(VueFullPage);
 
 // Import base components
 const requireComponent = require.context('../components', true, /Base[A-Z]\w+\.(vue|js)$/);
