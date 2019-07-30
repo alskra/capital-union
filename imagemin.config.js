@@ -20,18 +20,13 @@ const {join} = require('path');
  * Output directory
  * Where all the compressed images will go
  */
-const OUTPUT_DIR = /*'static/compressed'*/ '.';
+const OUTPUT_DIR = '';
 
 /**
  * List of input directories
  */
 const INPUT_DIRS = [
-	// 'static/img',
-	// 'static/images'
-	// ADD NEW FOLDERS HERE
-	// ...
 	'src/img',
-	'public/img',
 	'public/upload'
 ];
 
@@ -47,8 +42,8 @@ const options = {
 	 * @see https://github.com/imagemin/imagemin-mozjpeg
 	 */
 	mozjpegOptions: {
-		progressive: true,
-		quality: 90
+		quality: 80,
+		progressive: true
 	},
 	/**
 	 * PNG compression plugin options
@@ -56,6 +51,7 @@ const options = {
 	 * @see https://github.com/imagemin/imagemin-pngquant
 	 */
 	pngquantOptions: {
+		strip: true,
 		quality: [0.6, 0.8]
 	},
 	/**
@@ -84,10 +80,12 @@ const options = {
  * @see https://stackoverflow.com/a/40896897/4364074
  */
 const isDirectory = source => lstatSync(source).isDirectory();
+
 const getDirectories = source =>
 	readdirSync(source)
 		.map(name => join(source, name))
 		.filter(isDirectory);
+
 const getDirectoriesRecursive = source => [
 	source,
 	...getDirectories(source)
@@ -112,11 +110,12 @@ try {
 		 */
 		for (let i in imageDirs) {
 			const dir = imageDirs[i];
+
 			await imagemin([`${dir}/*.{jpg,png,svg,gif}`], join(OUTPUT_DIR, dir), {
 				plugins: [
 					imageminMozjpeg(options['mozjpegOptions']),
 					imageminPngquant(options['pngquantOptions']),
-					imageminSvgo(options['svgoOptions'])
+					imageminSvgo(options['svgoOptions']),
 					/**
 					 * @todo
 					 * Commenting out for now because gif plugin is broken at the moment
@@ -124,9 +123,10 @@ try {
 					 * @see https://github.com/imagemin/imagemin-gifsicle/issues/27
 					 * @see https://github.com/sindresorhus/is-gif/issues/2
 					 */
-					// imageminGifsicle(options['gifOptions']),
+					imageminGifsicle(options['gifOptions']),
 				]
 			});
+
 			console.log(`...${(((+i + 1) / imageDirs.length) * 100).toFixed(0)}%`);
 		}
 

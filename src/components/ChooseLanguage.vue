@@ -8,6 +8,7 @@
 	import IconLangZh from './IconLangZh';
 	import IconLangKo from './IconLangKo';
 	import IconLangRu from './IconLangRu';
+	import IconLangPl from './IconLangPl';
 
 	export default {
 		name: 'ChooseLanguage',
@@ -17,7 +18,8 @@
 			IconLangSr,
 			IconLangZh,
 			IconLangKo,
-			IconLangRu
+			IconLangRu,
+			IconLangPl
 		},
 		data() {
 			return {
